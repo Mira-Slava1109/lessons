@@ -1,0 +1,50 @@
+@import url("reset.css");
+
+[class*="sub"]{
+   color: rgb(109, 32, 126);
+}
+*{
+   color: rgb(127, 37, 7);
+}
+a{
+   color: crimson;
+}
+span{
+   color: burlywood;
+}
+.list a{
+   color: cadetblue;
+}
+a.item-yellow{
+   color: rgb(194, 194, 2);
+}
+
+.title{
+   color: dodgerblue;
+}
+
+.page span{
+   color: rgb(70, 190, 144);
+}
+.page ~p{
+   color: rgb(0, 188, 188);
+}
+.page+p{
+   color: darkorange;
+}
+.page__ancient-history >p{
+   color: rgb(134, 130, 72);
+}
+.page__ancient-history  .trypillia{
+   color: rgb(219, 195, 166);
+}
+.building,
+.spirit{
+   color: chartreuse;
+}
+.page__cossacks>p{
+color: rgb(147, 136, 221);
+}
+#header-title{
+   color: darkblue;
+}
