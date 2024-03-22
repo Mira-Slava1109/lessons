@@ -89,7 +89,7 @@ body{
    min-width: 400px;
    background-color: antiquewhite;
    display: block;
-   margin: 20px 445px 0px;
+   margin: 0 auto;
 }
 .inline-block{
    vertical-align: bottom;
