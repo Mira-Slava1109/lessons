@@ -37,7 +37,6 @@ body{
    padding-right: 40px;
 }
 .link {
-   min-width: 300px;
    text-align: center;
    font-size: 24px;
    font-weight: 600; 
@@ -56,7 +55,7 @@ body{
 }
 /* блочні тегі спеціально не робила  display: inline-block, щоб погратись з margine */
 .block{
-   width: 500px;
+   max-width: 500px;
    max-height: 200px;
 }
 .block-1{
@@ -74,7 +73,7 @@ body{
 }
 .span{
    display: inline-block;
-   width: 400px;
+   max-width: 400px;
    padding: 20px;
 }
 .span-1{
@@ -134,7 +133,7 @@ body{
 .advantages__item.last {
    margin-right: 0;
 }
-.advantages__item img{
+img.advantages__image{
    max-width: 100%;
 }
 .advantages__image{
@@ -156,8 +155,7 @@ body{
 .blog__header {
    margin-bottom: 40px;
 }
-.blog__header img{
-   width: 100%;
+.blog__header{
    margin-bottom: 40px;
 }
 .blog__header p{
