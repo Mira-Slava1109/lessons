@@ -1,0 +1,212 @@
+/* =====Підключення через плагін Google Fonts======== */
+@import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap");
+
+/* =====Підключення через Google Fonts======== */
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+/* =========================================================================== */
+@import url("reset.css");
+
+@import url("fonts.css");
+/* ============================================================================ */
+
+body{
+   font-family: "Proxima Nova",sans-serif;
+   color: #2B2929;
+   background-color: #F8F8F8;
+}
+
+[class*="__container"]{
+   max-width: 1290px;
+   margin: 0 auto;
+}
+
+/* ===================Header====================== */
+.header {
+   max-width: 1320px;
+   margin: 0 auto;
+
+}
+.header-list {
+   padding: 60px 125px;
+   font-size: 0;
+   margin-right: -40px;
+}
+.header-item{
+   display: inline-block;
+   padding-right: 40px;
+}
+.link {
+   min-width: 300px;
+   text-align: center;
+   font-size: 24px;
+   font-weight: 600; 
+}
+
+/* ==============Довільні стилі=============== */
+.page__practice{
+   font-family: "Nanum Gothic Coding";
+   font-size: 18px;
+}
+.practice__title{
+   font-size: 40px;
+   font-weight: 700;
+   text-align: center;
+   margin-bottom: 40px;
+}
+/* блочні тегі спеціально не робила  display: inline-block, щоб погратись з margine */
+.block{
+   width: 500px;
+   max-height: 200px;
+}
+.block-1{
+   background-color: yellowgreen;
+   padding: 20px;
+   overflow: auto;
+}
+.block-2{
+   background-color: rosybrown;
+   padding: 20px;
+   margin-left: 53.488372%; /* 690/1290 */
+   margin-top: -200px;
+   overflow: scroll;
+   margin-bottom: 40px;
+}
+.span{
+   display: inline-block;
+   width: 400px;
+   padding: 20px;
+}
+.span-1{
+   vertical-align: middle;
+   background-color: teal;
+}
+.span-2{
+   background-color: aquamarine;
+   margin: 0 50px;
+}
+.span-3{
+   min-width: 400px;
+   background-color: antiquewhite;
+   display: block;
+   margin: 0 auto;
+}
+.inline-block{
+   vertical-align: bottom;
+   max-width: 250px;
+}
+
+/* ======== Стилі за макетом Krovato=========== */
+
+.title {
+   font-size: 40px;
+   line-height: 1.2; /* 48/40 */
+   font-weight: 600;
+   margin-bottom: 40px;
+}
+.text{
+   line-height: 1.875; /* 30/16 */
+}
+/* ======================================== */
+
+.krovato__advantages {
+   padding-top: 70px;
+   padding-bottom: 35px;
+}
+.advantages__title {
+   text-align: center;
+   margin-bottom: 40px;
+}
+.advantages__title span{
+   text-transform: uppercase;
+}
+.advantages__items {
+   font-size: 0;
+}
+.advantages__item {
+   display: inline-block;
+   font-size: 16px;
+   text-align: center;
+   width: 23.255814%; /* 300/1290 */
+   vertical-align: top;
+   margin-right: 30px;
+}
+.advantages__item.last {
+   margin-right: 0;
+}
+.advantages__item img{
+   max-width: 100%;
+}
+.advantages__image{
+   margin-bottom: 20px;
+}
+.advantages__item-tittle {
+   font-size: 26px;
+   font-weight: 600;
+   line-height: 1.3; /* 34/26 */
+   margin-bottom: 20px;
+}
+/* =================================== */
+.page__blog{
+   max-width: 1070px;
+   margin: 0 auto;
+   padding-top: 35px;
+   padding-bottom: 40px;
+}
+.blog__header {
+   margin-bottom: 40px;
+}
+.blog__header img{
+   width: 100%;
+   margin-bottom: 40px;
+}
+.blog__header p{
+   margin-bottom: 10px;
+}
+.blog__sub-title {
+   font-size: 20px;
+   font-weight: 600;
+   line-height: 1.4; /* 28/20 */
+   margin-bottom: 30px;
+}
+.blog-list {
+   padding-left: 47px;
+}
+.item {
+   margin-bottom: 20px;
+}
+.text-bottom{
+   margin-top: 20px;
+}
+
+/* ======== Стилі за макетом EcommerceMinimal=========== */
+.page__ecommerceminimal {
+   background-color: #1E28320D;
+   max-width: 1320px;
+   margin: 0 auto;
+   padding-top: 100px;
+   padding-bottom: 70px;
+}
+.ecommerceminimal-title {
+   font-family: "Roboto",sans-serif;
+   font-size: 50px;
+   line-height: 1.18; /* 59/50 */
+   text-align: center;
+   color: #000;
+   margin-bottom: 60px;
+}
+.ecommerceminimal-galerry{
+   font-size: 0;
+   margin: 0 -12px;
+}
+.ecommerceminimal__link{
+   padding: 0 12px;
+}
+/* ==================Footer=================== */
+.footer {
+   font-size: 18px;
+   font-style: italic;
+   color: #932525;
+   text-shadow: 7px 10px 4px rgba(153, 34, 34, 0.5);
+   text-align: right;
+}
