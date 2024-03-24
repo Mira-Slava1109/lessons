@@ -169,12 +169,10 @@ img.advantages__image{
 }
 .blog-list {
    padding-left: 47px;
+   margin-bottom: 40px;
 }
 .item {
    margin-bottom: 20px;
-}
-.text-bottom{
-   margin-top: 20px;
 }
 
 /* ======== Стилі за макетом EcommerceMinimal=========== */
