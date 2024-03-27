@@ -12,14 +12,17 @@ body {
    font-family: "Proxima Nova",sans-serif;
    color: #2B2929;
 }
+[class*="__container"]{
+   max-width: 1340px;
+   margin: 0 auto;
+   overflow: hidden;
+}
 /* ======================Header=================== */
 .header {
    background: radial-gradient(circle, rgba(248,248,248,1) 0%, rgba(238,233,233,1) 94%);
    padding: 40px 0px;
 }
 .heade__container{
-   max-width: 1340px;
-   margin: 0 auto;
    padding: 0px 10px;
    font-size: 0;
 }
@@ -120,7 +123,7 @@ body {
    border-radius: 8px;
 }
 .eduplay__image {
-      display: inline-block;
+   display: inline-block;
    vertical-align: top;
    /* не розумію чому положення не змінюється коли задаєш його у відсотках */
    background: url("../img/eduplay/blob.svg") 20px 47px / contain no-repeat;
@@ -139,8 +142,6 @@ body {
    padding-bottom: 60px;
 }
 .ecommerceminimal__container {
-   max-width: 1340px;
-   margin: 0 auto;
    padding: 0px 10px;
    font-size: 0;
 }
@@ -158,7 +159,7 @@ body {
 }
 .ecommerceminimal__text {
    font-size: 30px;
-   line-height: 1.83333333; /* 55/30 */
+   line-height: 1.8; /* 55/30 */
    text-transform: capitalize;
    margin-bottom: 66px;
 }
@@ -169,23 +170,20 @@ body {
    text-transform: capitalize;
    background: #1e2832 url("../img/ecommerceminimal/icon.svg")  26px center no-repeat;
 }
-.ecommerceminimal__image {
+.ecommerceminimal__image{
    display: inline-block;
    vertical-align: top;
-   overflow: hidden;
-   font-size: 16px;
+   padding: 50px 0;
+
 }
-.ecommerceminimal__image img {
-   border-radius: 160px 0px 160px 0px;
+.ecommerceminimal__item{
+   border: 2px solid #B6B7B7;
+   border-radius: 160px 0;
 }
-.border {
-   width: 424px;
-   height: 524px;
-   border: 2px solid #888989;
-   border-radius: 160px 0px 160px 0px;
-   margin-top: -504px;
-   margin-left: 20px;
-   font-size: 16px;
+.ecommerceminimal__item img{
+   max-width: 100%;
+   border-radius: 160px 0;
+   margin: -20px 18px 20px -18px ;
 }
 /* ========================Practice==================================== */
 .page__practice{
@@ -243,7 +241,7 @@ span{
 .item__buttton {
    font-size: 16px;
    letter-spacing: 4px;
-   padding: 20px 70px;
+   padding: 10% 20%;
    background-color: #F8F8F8;
    border-radius: 20px;
    box-shadow: 2px 4px 5px #f1aeae;
