@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Reddit+Mono:500&display=swap");
+
+@import url("reset.css");
+
+/* @import url("fonts.css"); */
+/* =============================================== */
+body{
+   background-color: #eecbcb;
+   font-family: "Reddit Mono", sans-serif;
+   font-size: 24px;
+}
+.header {
+   box-shadow: inset  5px 5px 15px 10px #f29c9c, inset  -5px -5px 15px 10px #f29c9c;
+   border-radius: 10px;
+   padding: 40px 0;
+}
+.header__title {
+   text-align: center;
+   font-size: 32px;
+}
+.page__web-graphics {
+}
+.web-graphics__container {
+   max-width: 1000px;
+   margin: 0 auto;
+   padding: 40px 15px;
+}
+.web-graphics__items{
+}
+.web-grafic__item{
+   margin-bottom: 20px;
+}
+.web-grafic__item img{
+   vertical-align: middle;
+   max-width: 410px;
+}
+.backgraund span{
+   display: block;
+   padding-left: 43px;
+   min-height: 30px;
+}
+.backgraund span:not(:last-child){
+   margin-bottom: 20px;
+}
+.backgraund span:nth-child(1){
+   background: url("../img/icons/icons-background/menu-catalog.svg") 0 0 / 30px no-repeat;
+}
+.backgraund span:nth-child(2){
+   background: url("../img/icons/icons-background/tel.svg") 0 0  / 30px no-repeat;
+}
+.backgraund span:nth-child(3){
+   background: url("../img/icons/icons-background/akcii.svg") 0 0 / 30px no-repeat;
+}
+.backgraund span:nth-child(4){
+   background: url("../img/icons/icons-background/sale.svg") 0 0 / 30px no-repeat;
+}
+.backgraund span:nth-child(5){
+   background: url("../img/icons/icons-background/credit.svg") 0 0 / 30px no-repeat;
+}
+.backgraund span:nth-child(6){
+   background: url("../img/icons/icons-background/question.svg") 0 0 / 30px no-repeat;
+}
+.web-grafic__item-big span{
+   display: block;
+}
+.footer{
+   text-align: center;
+   box-shadow: inset  5px 5px 15px 10px #f29c9c, inset  -5px -5px 15px 10px #f29c9c;
+   border-radius: 10px;
+   padding: 40px 0;
+}
