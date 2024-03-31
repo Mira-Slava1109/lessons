@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:regular,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Orbitron:500&display=swap");
+/* =========================================================================== */
+@import url("reset.css");
+
+@import url("fonts.css");
+/* =============================================== */
+
+body {
+   font-family: "Proxima Nova",sans-serif;
+   color: #2B2929;
+}
+
+/* ======================Header=================== */
+.header,
+.footer {
+   background: radial-gradient(circle, rgba(248,248,248,1) 0%, rgba(238,233,233,1) 94%);
+   padding: 40px 0px;
+}
+.header__container{
+   max-width: 1340px;
+   margin: 0 auto;
+   padding: 0px 10px;
+   font-size: 0;
+}
+.header__list {
+   text-align: center;
+}
+.header__list > *:not(:last-child){
+   margin-bottom: 20px;
+}
+.header__item {
+   font-size: 24px;
+   font-weight: 600;
+}
+.header__link:hover{
+   color: #5f4848;
+   text-transform: uppercase;
+}
+.header__link:active{
+   color: #b32929;
+}
+/* ======================Krovato=================== */
+.page__krovato {
+   background-color: #F8F8F8;
+}
+.krovato__container {
+   max-width: 1070px;
+   margin: 0 auto;
+   padding: 40px 10px;
+}
+.krovato__header,
+.krovato__image,
+.krovato-list{
+   margin-bottom: 40px; 
+}
+.krovato__header p:not(:last-child) {
+   margin-bottom: 10px;
+}
+.krovato__title {
+   font-size: 40px;
+   line-height: 1.2; /* 48/40 */
+   font-weight: 600;
+   margin-bottom: 40px;
+}
+.krovato__image {
+   border-radius: 8px;
+   overflow: hidden;
+   width: 100%;
+}
+.text {
+   line-height: 1.875; /* 30/16 */
+}
+.krovato__sub-title {
+   font-size: 20px;
+   line-height: 1.4; /* 28/20 */
+   font-weight: 600;
+   margin-bottom: 30px;
+}
+
+.item {
+   background: url("../img/krovato/mark.svg") 0 0/ 32px no-repeat;
+   padding-left: 47px;
+   min-height: 32px;
+} 
+.item:not(:last-child){
+   margin-bottom: 20px;
+}
+/* ===========================Portfolio================================ */
+.page__portfolio {
+   font-family: "Exo", sans-serif;
+   font-size: 18px;
+   color: #fff;
+   text-transform: capitalize;
+   background-color: #000000;
+}
+.portfolio__container {
+   max-width: 1300px;
+   margin: 0 auto;
+   padding: 120px 15px;
+   font-size: 0;
+   background: url("../img/portfolio/background.png") 0 0 /  contain no-repeat;
+}
+.title{
+   display: inline-block;
+   font-weight: 700;
+   font-size: 60px;
+   line-height: 1.17;
+   text-transform: uppercase;
+   color: #fff;
+}
+.about__content {
+   max-width: 990px;
+   margin: 0 auto;
+   overflow: hidden;
+   text-align: center;
+}
+.about__title:not(:last-child){
+   margin-bottom: 20px;
+}
+.about__title::after{
+   content: "";
+   display: block;
+   margin-top: 6.7%;
+   margin-inline:  -16.6%;
+   height: 1px;
+   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(66,255,0,1) 50%, rgba(36,0,255,1));
+}
+.about__text {
+   font-size: 18px;
+   line-height: 2.22;  /* 40/18  */
+   letter-spacing: -0.02em;
+   margin-bottom: 60px;
+}
+.about__skills {
+   padding: 0 60px;
+}
+.skills__item {
+   display: inline-block;
+   font-family: "Orbitron", sans-serif;
+   font-size: 20px;
+  line-height: 125%;  /* 25/20  */
+}
+.skills__item:not(:last-child){
+   margin-right: 60px;
+}
+.skills__item::after{
+   content: "";
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(66,255,0,1) 50%, rgba(36,0,255,1) 100%);
+   margin-left: 60px;
+}
+.portfolio__contacts::before{
+   content: "";
+   display: block;
+   height: 50px;
+   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(66,255,0,1) 50%, rgba(36,0,255,1) 100%);
+   opacity: 0.1;
+}
+.contacts__container{
+   max-width: 1300px;
+   margin: 0 auto;
+   padding: 120px 15px 60px;
+   font-size: 0;
+}
+.contacts__content{
+   max-width: 960px;
+   overflow: hidden;
+}
+.contacts__title{
+   margin-bottom: 40px;
+}
+.contacts__title::after{
+   content: "";
+   display: block;
+   margin-right: -16.5%;
+   margin-top: 20px;
+   height: 1px;
+   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(66,255,0,1) 50%, rgba(36,0,255,1));
+}
+.contacts__list{
+   padding-bottom: 60px;
+}
+.contacts__item {
+   display: inline-block;
+   font-size: 20px;
+   letter-spacing: -0.02em;
+}
+.contacts__item:not(:last-child){
+   margin-right: 80px;
+}
+.contacts__item img{
+   margin-right: 20px;
+   vertical-align: middle;
+}
+/* .contacts__item:nth-child(1)::before{
+   content: "";
+   width: 20px;
+   height: 20px;
+   background: url("../img/portfolio/contacts/phone.svg") 0 0 /100%  no-repeat;
+   vertical-align: middle;
+   margin-right: 20px;
+}
+.contacts__item:nth-child(2)::before{
+   content: "";
+   width: 20px;
+   height: 20px;
+   background: url("../img/portfolio/contacts/location.svg") 0 0 /100%  no-repeat;
+   vertical-align: middle;
+   margin-right: 20px;
+}
+.contacts__item:nth-child(3)::before{
+   content: "";
+   width: 20px;
+   height: 20px;
+   background: url("../img/portfolio/contacts/email.svg") 0 0 /100%  no-repeat;
+   vertical-align: middle;
+   margin-right: 20px;
+} */
+
+/* =========== Game=============== */
+.pade__game {
+   background-color: aqua;
+   padding: 50px;
+}
+.game__container{
+   background-color: #247f96;
+   max-width: 770px;
+   margin: 0 auto;
+   padding: 20px;
+   border-radius: 20px;
+}
+.game__line {
+   background-color: aqua;
+}
+.line-1 {
+   background: url("../img/game/start.webp") 0 0 / contain no-repeat ;
+   width: 6.666667%; /* 50/750 */
+   height: 50px;
+   margin: 0 auto;
+}
+.line-1:hover ~ .line-2,
+.line-2:hover{
+   visibility: visible;
+}
+.line-2 {
+   width: 6.666667%; /* 50/750 */
+   height: 50px;
+   margin: 0 auto;
+   visibility: hidden;
+}
+.line-2:hover ~ .line-3,
+.line-3:hover{
+   visibility: visible;
+}
+.line-3 {
+width: 53.333333%; /* 400/750 */
+height: 50px;
+visibility: hidden;
+}
+.line-3:hover ~ .line-4,
+.line-4:hover{
+   visibility: visible;
+}
+.line-4{
+   width: 6.666667%; /* 50/750 */
+   height: 100px;
+   visibility: hidden;
+}
+.line-4:hover ~ .line-5,
+.line-5:hover{
+   visibility: visible;
+}
+.line-5{
+   height: 30px;
+   visibility: hidden; 
+}
+.line-5:hover ~ .line-6,
+.line-6:hover{
+   visibility: visible;
+}
+.line-6{
+   margin-left: 93.3%;
+   visibility: hidden;
+   width: 6.666667%; /* 50/750 */
+   height: 50px;
+}
+.line-6:hover ~ .line-7,
+.line-7:hover{
+   visibility: visible;
+}
+.line-7{
+   margin-left: 25.3%;
+   visibility: hidden;
+   width: 74.666667%; /* 560/750 */
+   height: 50px;
+}
+.line-7:hover ~ .line-8,
+.line-8:hover{
+   visibility: visible;
+}
+
+.line-8{
+   margin-left: 25.3%;
+   width: 6.666667%; /* 50/750 */
+   height: 50px;
+   visibility: hidden;
+}
+.line-8:hover + .game__finish,
+.game__finish:hover{
+   visibility: visible;
+}
+.game__finish{
+   background: url("../img/game/finish.webp") 0 0 / contain no-repeat;
+   max-width: 200px;
+   height: 200px;
+   margin-left: 15.333333%; /* 115/750 */
+   visibility: hidden;
+}
+/* ==============================Practice===================================== */
+.krovato__practice {
+   background-color: #F8F8F8;
+   line-height: 1.875; /* 30/16 */
+}
+.practice__container {
+   max-width: 1070px;
+   margin: 0 auto;
+   padding: 40px 10px;
+}
+.practice__container >*:not(:last-child) {
+   margin-bottom: 40px;
+}
+.practice__header >*:not(:last-child){
+   margin-bottom: 40px;
+}
+.practice__container *:first-of-type:nth-child(2){
+   font-size: 20px;
+   line-height: 1.4; /* 28/20 */
+   font-weight: 600;
+   margin-bottom: 30px;
+}
+.practice__header *:first-child{
+   font-size: 40px;
+   line-height: 1.2; /* 48/40 */
+   font-weight: 600;
+}
+.practice__header p:first-of-type{
+   margin-bottom: 10px;
+}
+.practice__header img{
+   border-radius: 8px;
+   overflow: hidden;
+   width: 100%;
+}
+.practice__container ul p:nth-child(2n + 1),
+.practice__container ul p:nth-child(even){
+   background: url("../img/krovato/mark.svg") 0 0 / 32px no-repeat;
+   padding-left: 47px;
+   min-height: 32px;
+}
+.practice__container li:not(:last-child){
+margin-bottom: 20px;
+}
+/* ===========================Footer====================================== */
+.footer{
+   background: radial-gradient(circle, rgba(248,248,248,1) 0%, rgba(238,233,233,1) 94%);
+   padding: 40px 0px;
+}
+.footer__link{
+   font-size: 24px;
+   font-weight: 600;
+   margin-left: 50%;
+}
+.footer__link:hover{
+   color: #5f4848;
+   text-transform: uppercase;
+}
