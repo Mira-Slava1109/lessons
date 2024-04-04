@@ -90,7 +90,7 @@ body {
    color: #fff;
 }
 .eduplay__container {
-   background: url("../img/eduplay/alphabet.png") 137% 20% no-repeat, url("../img/eduplay/patterns.png") right  21% no-repeat;;
+   background: url("../img/eduplay/alphabet.png") 137% 20%  no-repeat, url("../img/eduplay/patterns.png") right  21% no-repeat;;
    max-width: 1300px;
    margin: 0 auto;
    padding: 0px 10px;
@@ -114,12 +114,13 @@ body {
    margin-bottom: 24px;
 }
 .eduplay__link {
+   background: url("../img/eduplay/button-labe.png") 10% 50%  / 16px no-repeat;
    font-size: 16px;
    line-height: 1.5625; /* 25/16 */
    font-weight: 700;
    background-color: #fff;
    color: #0D1216;
-   padding: 12px 20px;
+   padding: 12px 20px 12px 40px;
    border-radius: 8px;
 }
 .eduplay__image {
@@ -196,12 +197,15 @@ body {
    margin: 0 auto; 
 }
 .practice__body{
-   background:  url("../img/practice/mony.svg") 0 0 / contain no-repeat, linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(241,220,220,1) 70%);
+   background:  /*  url("../img/practice/mony.svg") 0 0 / contain no-repeat, */ linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(241,220,220,1) 70%); 
    border-radius: 8px;
+   
 }
 .practice__content{
+   display: inline-block;
    max-width: 550px;
    padding: 88px 50px;
+   margin-right: 50px;
 }
 .practice__title {
    font-size: 40px;
@@ -219,6 +223,9 @@ body {
 }
 span{
    border: solid 2px #f1aeae;
+}
+.image{
+   vertical-align: top;
 }
 .practice__button {
    max-width: 1090px;
