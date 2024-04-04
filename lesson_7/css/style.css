@@ -163,7 +163,7 @@ body {
 .contacts__container{
    max-width: 1300px;
    margin: 0 auto;
-   padding: 120px 15px 60px;
+   padding: 120px 15px;
    font-size: 0;
 }
 .contacts__content{
@@ -181,9 +181,6 @@ body {
    height: 1px;
    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(66,255,0,1) 50%, rgba(36,0,255,1));
 }
-.contacts__list{
-   padding-bottom: 60px;
-}
 .contacts__item {
    display: inline-block;
    font-size: 20px;
@@ -196,7 +193,7 @@ body {
    margin-right: 20px;
    vertical-align: middle;
 }
-/* .contacts__item:nth-child(1)::before{
+.link-tel::before{
    content: "";
    width: 20px;
    height: 20px;
@@ -204,7 +201,7 @@ body {
    vertical-align: middle;
    margin-right: 20px;
 }
-.contacts__item:nth-child(2)::before{
+.link-location::before{
    content: "";
    width: 20px;
    height: 20px;
@@ -212,14 +209,14 @@ body {
    vertical-align: middle;
    margin-right: 20px;
 }
-.contacts__item:nth-child(3)::before{
+.link-email::before{
    content: "";
    width: 20px;
    height: 20px;
    background: url("../img/portfolio/contacts/email.svg") 0 0 /100%  no-repeat;
    vertical-align: middle;
    margin-right: 20px;
-} */
+}
 
 /* =========== Game=============== */
 .pade__game {
@@ -355,8 +352,8 @@ visibility: hidden;
    overflow: hidden;
    width: 100%;
 }
-.practice__container ul p:nth-child(2n + 1),
-.practice__container ul p:nth-child(even){
+.practice__container ul li:nth-child(2n + 1),
+.practice__container ul li:nth-child(even){
    background: url("../img/krovato/mark.svg") 0 0 / 32px no-repeat;
    padding-left: 47px;
    min-height: 32px;
