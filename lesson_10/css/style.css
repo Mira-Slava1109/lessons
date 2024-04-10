@@ -1,0 +1,218 @@
+/* @import url("https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap"); */
+
+@import url("reset.css");
+
+@import url("fonts.css"); 
+/* =============================================== */
+body{
+   font-family: "Proxima Nova", sans-serif;
+   color: #2B2929;
+}
+
+.wrapper {
+   min-height: 100%;
+	overflow: clip;
+}
+[class*="__container"] {
+   max-width: 1310px;
+   margin: 0 auto;
+   padding: 0 10px;
+}
+.header {
+   position: fixed;
+   background-color: #fff;
+   width: 100%;
+   z-index: 5;
+}
+.header__category {
+   position: relative;
+   /* background-color: rgba(26, 25, 25, 0.8); */
+   }
+.category {
+   padding-block: 25px;
+}
+.category__button {
+   padding: 11px 20px;
+   background-color: #FFBC57;
+   color: #fff;
+   font-size: 19px;
+   line-height: 1.26;    /*24/19  */
+   font-weight: 600;
+   border-radius: 8px;
+   } 
+.category__button::before{
+   content: "";
+   background: url("../img/button.svg") 0 0  no-repeat;
+   width: 24px;
+   height: 24px;
+   margin-right: 10px;
+   vertical-align: middle;
+}
+.category__button:focus::before{
+   content: "";
+   background: url("../img/close-catalog.svg") 0 0 no-repeat;
+   width: 24px;
+   height: 24px;
+   margin-right: 10px;
+   vertical-align: middle; 
+}
+.menu {
+   display: none;
+   position: relative;
+}
+.menu:target{
+   display: block;
+   position: absolute;
+   top: 115%;
+   left: 3.9%;
+   border-radius: 8px;
+   background-color: #ffffff; 
+   padding: 8px 0;
+}
+
+.menu__item {
+   min-width: 300px;
+   font-size: 20px;
+   line-height: 1.4;   /* 28/20  */
+   font-weight: 600;
+   padding: 10px 15px 10px 30px;
+}
+.menu__item:hover .sub-menu{
+   display: block;
+}
+.menu__link{
+   position: relative;
+}
+.menu__link * {
+   vertical-align: middle;
+}
+.menu__link{
+   background: url("../img/category-item/arrow.svg") center right / 24px no-repeat;
+   min-height: 24px;
+}
+.menu__item:focus,
+.menu__item:hover .menu__link{
+   background-image: url("../img/category-item/arrow-hover.svg");
+}
+.menu__item:hover {
+   background-color: #FFBC57;
+}
+.menu__item img{
+   margin-right: 15px;
+}
+.menu__link {
+display: block;
+}
+.sub-menu {
+   background-color: #fff;
+   border-radius: 0 8px 8px 0; 
+   min-width: 323px;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 98%;
+   display: none;
+   padding-block: 8px;
+   overflow-y: auto;
+}
+.sub-menu::before{
+   content: "";
+   width: 5px;
+   height: 97.4%;
+   background-color: #FFBC57;
+   position: absolute;
+   top: 1.3%;
+   left: 0;
+}
+.sub-menu__item {
+   font-weight: 400;
+   font-size: 19px;
+}
+.sub-menu__item:hover{
+   background-color: #FFBC57;
+}
+.sub-menu__item:not(:last-child){
+   margin-bottom: 10px;
+}
+.sub-menu__link {
+   padding: 10px 0px 10px 30px;
+}
+/* ========================================= */
+.page {
+   padding-top: 100px;
+   background-color: #f8f8f8f8;
+}
+.page__category {
+}
+.category {
+   font-size: 0;
+}
+.category__title {
+}
+.title {
+   font-size: 40px;
+   line-height: 1.2; /* 48/40 */
+   font-weight: 600;
+}
+.category__items {
+   position: relative;
+   margin-right: -10px;
+   margin-bottom: -24px;
+}
+.category__item {
+   position: relative;
+   font-size: 20px;
+   line-height: 14; /* 28/20 */
+   overflow: hidden;
+}
+.item {
+   /* position: relative;
+   z-index: 5; */
+   font-size: 20px;
+   line-height: 1.4; /* 28/20 */
+   display: inline-block;
+   max-width: 250px;
+   border-radius: 8px;
+   background-color: #fff;
+   padding: 20px 20px 0 20px;
+   margin-right: 10px;
+   margin-bottom: 24px;
+   box-shadow: 10px 10px 10px 10px rgba(177, 177, 177, 0.1);
+}
+.item__name {
+   font-weight: 600;
+}
+.item__name:hover{
+   text-shadow: 2px 2px 2px rgba(177, 177, 177, 0.5);
+}
+.item__quantity {
+   color: #B1B1B1;
+   position: absolute;
+   top: 6.666667%; /* 20/300 */
+   right: 6.666667%; /* 20/300 */
+}
+.item__image {
+   position: relative;
+   z-index: 3;
+   font-size: 16px;
+}
+.item::before{
+   content: "";
+   width: 280px;
+   height: 280px;
+   background-color: #F8F8F8;
+   border-radius: 50%;
+   position: absolute;
+   top: 40%;
+   left: -5%;
+}
+.item__image::after{
+   content: "";
+   background: url("../img/arrow.svg") 0 0 no-repeat;
+   width: 50px;
+   height: 50px;
+   position: absolute;
+   bottom: 6.666667%; /* 20/300 */
+   right: 6.666667%; /* 20/300 */
+}
+
