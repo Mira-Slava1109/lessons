@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Lesson 11</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__container">
+            <h1 class="header__title">Урок №11 (Трансформації)</h1>
+         </div>
+      </header>
+      <main class="page">
+         <div class="page__transform transform">
+            <div class="transform__container">
+               <h2 class="transform__title">2D трансформаці</h2>
+               <div class="transform__block block">
+                  <div class="block__item block__item--translate">transform:<br>translate(-20%, 20%)</div>
+               </div>
+               <div class="transform__block block">
+                  <div class="block__item block__item--scale">transform:<br>scale(0.7)</div>
+               </div>
+               <div class="transform__block block">
+                  <div class="block__item block__item--rotate">transform: rotate(45deg)</div>
+               </div>
+               <div class="transform__block block">
+                  <div class="block__item block__item--skew">transform: skew(-20deg 30deg)</div>
+               </div>
+               <div class="transform__block block">
+                  <div class="block__item block__item--origin">transform: rotate(45deg);<br>transform-origin: top left
+                  </div>
+               </div>
+               <div class="transform__block block">
+                  <div class="block__item block__item--matrix">
+                     transform: <br> matrix(1, 0.5, -1, 0.5, 10, 20)<br>
+                     або<br>
+                     transform: scale(1, 0.5) skew(-45deg, 45deg) translate(10px, 20px)</div>
+               </div>
+            </div>
+            <div class="transform__container">
+               <h2 class="transform__title">3D трансформації</h2>
+               <div class="transform__block block block--perspective">
+                  <div class="block__item block__item--translate3d">transform: translate3d(10px, 10px, 70px)</div>
+               </div>
+               <div class="transform__block block block--perspective">
+                  <div class="block__item block__item--scale3d">transform: scale3d(1.2, 1.5, -1.7)</div>
+               </div>
+               <div class="transform__block block block--perspective">
+                  <div class="block__item block__item--rotate3d">transform: rotate3d(20, 0, 30, 60deg)</div>
+               </div>
+               <div class="transform__block block block--perspective">
+                  <div class="block__item block__item--rotate-3d"> transform: rotate3d(60, 0, 0, 180deg)</div>
+               </div>
+               <div class="transform__block block block--perspective">
+                  <div class="block__item block__item--rotate-3d-1">
+                     transform: rotate3d(60, 0, 0, 180deg) <br>
+                     backface-visibility: hidden</div>
+               </div>
+               <div class="transform__block block--perspective block block--1">
+                  <div class="block__cube cube">
+                     <div class="cube__item front">front</div>
+                     <div class="cube__item back">back</div>
+                     <div class="cube__item right">right</div>
+                     <div class="cube__item left"> left</div>
+                     <div class="cube__item top">top</div>
+                     <div class="cube__item bottom">bottom</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="page__taro taro">
+            <div class="taro__container">
+               <h2 class="taro__title">Ворожіння на картах Таро</h2>
+               <h3 class="taro__sub-title">Обери карту та <span>натисни</span></h3>
+               <a href="#pentacles" class="taro__body taro__body--1">
+                  <div class="taro__back">
+                     <img src="img/taro/back.webp" alt="Image">
+                  </div>
+                  <div class="taro__front">
+                     <img src="img/taro/pentacles.webp" alt="Image">
+                  </div>
+               </a>
+               <a href="#strength" class="taro__body taro__body--2">
+                  <div class="taro__back">
+                     <img src="img/taro/back.webp" alt="Image">
+                  </div>
+                  <div class="taro__front">
+                     <img src="img/taro/strength.jpg" alt="Image">
+                  </div>
+               </a>
+               <a href="#sun" class="taro__body taro__body--3">
+                  <div class="taro__back">
+                     <img src="img/taro/back.webp" alt="Image">
+                  </div>
+                  <div class="taro__front">
+                     <img src="img/taro/sun.webp" alt="Image">
+                  </div>
+               </a>
+               <div class="taro__value value">
+                  <div id="pentacles" class="value__text value__text--pentacles">
+                     <p>
+                        Карта Туз пентаклей означає процвітання. У ваше життя приходить стабільність, спокій,
+                        благополуччя, достаток,гармонія у спілкуванні з оточуючими. Ви зможете домогтися бажаного
+                        незабаром або отримаєте достойну винагороду за зусилля, які докладали в минулому, будете
+                        насолоджуватися результатами своєї діяльності. одне тлумачення аркана – це поява нових
+                        можливостей, ресурсів, перспектив, отримання позитивного досвіду.
+                     </p>
+                  </div>
+                  <div id="strength" class="value__text value__text--strength">
+                     <p>
+                        Тлумачення Сили – це моральне перевагу. Найголовніше для вас завдання на даний момент –
+                        розвиток
+                        емоційної зрілості. Важливо покладатися тільки на власні переконання, розвивати характер,
+                        вольові якості, боротися зі своїми слабкостями, контролювати негативні стани,
+                        наприклад,імпульсивність, малодушність, жалість до себе, злість, жорсткість, при цьому
+                        частіше
+                        виявляти турботу і любов до оточуючих.
+                     </p>
+                  </div>
+                  <div id="sun" class="value__text value__text--sun">
+                     <p>
+                        Карта Сонце символізує позитивні зміни в житті: рішення складної ситуації, закінчення
+                        важкого
+                        періоду або поява перспектив. Настають часи, коли ви можете радіти кожному дню, бути
+                        активним,
+                        починати нові проекти.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="page__car car">
+            <div class="car__title">Автівка</div>
+            <div class="car__container">
+               <div class="car__roof roof">
+                  <div class="roof__element"></div>
+               </div>
+               <div class="car__window window">
+                  <div class="window__content">
+                     <div class="window__first first-window">
+                        <div class="first-window__back">
+                           <div class="first-window__front"></div>
+                        </div>
+                     </div>
+                     <div class="window__second second-window">
+                        <div class="second-window__back">
+                           <div class="second-window__front"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="car__body">
+                  <div class="car__element"></div>
+                  <div class="car__hood hood">
+                     <div class="hood__lighthouse"></div>
+                  </div>
+                  <div class="car__trunk trunk">
+                     <div class="trunk__lighthouse"></div>
+                  </div>
+               </div>
+               <div class="car__door door">
+                  <div class="door__front">
+                     <div class="door__handle handle">
+                        <div class="handle__middle"></div>
+                     </div>
+                  </div>
+                  <div class="door__front">
+                     <div class="door__handle handle">
+                        <div class="handle__middle"></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="car__wheel wheel">
+                  <div class="wheel__item wheel__item--first">
+                     <div class="wheel__top">
+                        <div class="wheel__middle">
+                           <div class="wheel__disk"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="wheel__item wheel__item--second">
+                     <div class="wheel__top">
+                        <div class="wheel__middle">
+                           <div class="wheel__disk"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer class="footer">
+         <div class="footer__container">
+            <a target="_blank" class="footer__link" href="continued.html">*Весна 2024*</a>
+         </div>
+      </footer>
+   </div>
+</body>
+
+</html>
