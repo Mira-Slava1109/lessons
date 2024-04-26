@@ -68,9 +68,6 @@ body{
    animation: sing 3s linear 2s forwards;
 }
 /* ============================================== */
-.car{
-   padding-top: 120px;
-}
 .car__periscope{
    display: inline-block;
    position: absolute;
@@ -376,7 +373,7 @@ background: url("../img/car/salon-2.svg") 110% 110% no-repeat,  linear-gradient(
    border: 28px dashed rgb(27, 30, 30);
 }
 /* ============================================= */
-.dark__screen {
+.dark-screen {
    position: absolute;
    top: 0;
    left: 0;
