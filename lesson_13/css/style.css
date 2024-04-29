@@ -95,6 +95,7 @@ body {
 }
 .advice__menu {
    display: flex;
+   flex-wrap: wrap;
    gap: 10px;
 }
 .advice__item {
@@ -260,7 +261,7 @@ body {
 .category-popular__item {}
 
 .item {
-   flex-basis: 19.379845%; /* 250/1290 */
+   flex-basis: 250px;
    background-color: #fff;
    border-radius: 8px;
    overflow: hidden;
@@ -347,7 +348,7 @@ body {
    display: flex;
    flex-direction: column;
    gap: 20px;
-   flex-basis: 23.255814%; /* 300/1290 */
+   flex-basis: 300px;
    background-color: #fff;
    border-radius: 8px;
    overflow: hidden;
