@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Lesson 14</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__top top-header">
+            <div class="top-header__container">
+               <nav class="top-header__menu menu">
+                  <ul class="menu__list">
+                     <li class="menu__item"><a href="#" class="menu__link">Про нас</a></li>
+                     <li class="menu__item"><a href="#" class="menu__link">Доставка та збірка</a></li>
+                     <li class="menu__item"><a href="#" class="menu__link">Відгуки</a></li>
+                     <li class="menu__item"><a href="#" class="menu__link">Блог</a></li>
+                     <li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
+                  </ul>
+               </nav>
+               <div class="top-header__advice advice">
+                  <div class="advice__media">
+                     <p class="advice__text">Допомога і консультація:</p>
+                     <ul class="advice__menu">
+                        <li class="advice__item">
+                           <a href="#" class="advice__link">
+                              <img src="img/icons-header/whatsapp.svg" alt="whatsapp">
+                           </a>
+                        </li>
+                        <li class="advice__item">
+                           <a href="" class="advice__link">
+                              <img src="img/icons-header/telegram.svg" alt="telegram">
+                           </a>
+                        </li>
+                        <li class="advice__item">
+                           <a href="" class="advice__link">
+                              <img src="img/icons-header/viber.svg" alt="viber">
+                           </a>
+                        </li>
+                     </ul>
+                     <form action="#" class="advice__language">
+                        <div class="advice__select">
+                           <select class="advice__choise" name="form[]">
+                              <option value="form[]">UA</option>
+                              <option value="form[]">EN</option>
+                           </select>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="header__main main-header">
+            <div class="main-header__container">
+               <a href="#" class="main-header__logo">
+                  <img src="img/logo.svg" alt="логотип Кровато">
+               </a>
+               <a href="#" class="main-header__catalog">Каталог</a>
+               <form action="#" class="main-header__search search">
+                  <input type="text" placeholder="Пошук товарів" class="search__input">
+                  <button type="submit" class="search__button"></button>
+               </form>
+               <div class="main-header__phone phone">
+                  <p class="phone__schedule">Щодня з 9:00 до 18:00</p>
+                  <a class="phone__number" href="tel:0679294545">067 929-45-45</a>
+               </div>
+               <div class="main-header__shopping shopping">
+                  <a href="#" class="shopping__icon shopping__icon--favorites"><img src="img/icons-header/favorites.svg"
+                        alt="favorites"></a>
+                  <a href="#" class="shopping__icon shopping__icon--cart"><img src="img/icons-header/cart.svg"
+                        alt="cart"></a>
+               </div>
+            </div>
+         </div>
+         <div class="header__bottom bottom-header">
+            <div class="bottom-header__container">
+               <nav class="bottom-header__proposals">
+                  <ul class="bottom-header__list">
+                     <li class="bottom-header__item">
+                        <a href="" class="bottom-header__link">
+                           <img src="img/icons-header/akcii.svg" alt="icon">
+                           Акції
+                        </a>
+                     </li>
+                     <li class="bottom-header__item">
+                        <a href="" class="bottom-header__link">
+                           <img src="img/icons-header/sale.svg" alt="icon">
+                           Розпродаж
+                        </a>
+                     </li>
+                     <li class="bottom-header__item">
+                        <a href="" class="bottom-header__link">
+                           <img src="img/icons-header/credit.svg" alt="icon">
+                           Купити в кредит
+                        </a>
+                     </li>
+                  </ul>
+               </nav>
+               <nav class="bottom-header__rooms">
+                  <ul class="bottom-header__list">
+                     <li class="bottom-header__item">
+                        <a href="" class="bottom-header__link">Дитяча</a>
+                     </li>
+                     <li class="bottom-header__item">
+                        <a href="" class="bottom-header__link">Кухня</a>
+                     </li>
+                     <li class="bottom-header__item">
+                        <a href="" class="bottom-header__link">Ванна</a>
+                     </li>
+                     <li class="bottom-header__item">
+                        <a href="" class="bottom-header__link">Спальня</a>
+                     </li>
+                     <li class="bottom-header__item">
+                        <a href="" class="bottom-header__link">Передпокій</a>
+                     </li>
+                     <li class="bottom-header__item">
+                        <a href="" class="bottom-header__link">Вітальня</a>
+                     </li>
+                     <li class="bottom-header__item">
+                        <a href="" class="bottom-header__link">Офіс</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </header>
+      <main class="page">
+         <div class="page__container">
+            <h1 class="page__title title">Оформлення замовлення</h1>
+            <form class="page__form form">
+               <div class="form__info info">
+                  <h2 class="info__sub-title sub-title">Інформація про покупця</h2>
+                  <div class="info__body body-info">
+                     <input name="form[]" required class="body-info__input" placeholder="Прізвище" type="text">
+                     <input name="form[]" required class="body-info__input" placeholder="Контактний телефон" type="tel">
+                     <input name="form[]" required class="body-info__input" placeholder="Ім’я" type="text">
+                     <input name="form[]" required class="body-info__input" placeholder="E-mail" type="email">
+                     <input name="form[]" required class="body-info__input" placeholder="По батькові" type="text">
+                  </div>
+                  <label for="other" class="body-info__recipient recipient">
+                     <input id="other" name="form[]" type="checkbox" class="recipient__input">
+                     <span class="recipient__text">Отримуватиме замовлення інша людина</span>
+                  </label>
+               </div>
+               <div class="form__delivery delivery">
+                  <h2 class="delivery__sub-title sub-title">Вибір способу доставки</h2>
+                  <div class="delivery__radio radio-delivery">
+                     <label class="radio-delivery__label">
+                        <input name="form[]" class="radio-delivery__input" type="radio">
+                        <img class="radio-delivery__icon" src="img/icons-main/shop.svg" alt="Векторна іконка магазину">
+                        <span class="radio-delivery__text">Самовивіз із магазину</span>
+                        <span class="radio-delivery__text">Бесплатно</span>
+                     </label>
+                     <label class="radio-delivery__label">
+                        <input name="form[]" class="radio-delivery__input" type="radio">
+                        <img class="radio-delivery__icon" src="img/icons-main/np.svg" alt="Логотип Нова Пошта">
+                        <span class="radio-delivery__text">Доставка Нова Пошта</span>
+                        <span class="radio-delivery__text">≈ від 500 грн</span>
+                     </label>
+                     <label class="radio-delivery__label">
+                        <input name="form[]" class="radio-delivery__input" type="radio">
+                        <img class="radio-delivery__icon" src="img/icons-main/сourier.svg" alt="Векторна іконка кур'єр">
+                        <span class="radio-delivery__text">Доставка кур'єром</span>
+                        <span class="radio-delivery__text">≈ від 200 грн</span>
+                     </label>
+                  </div>
+                  <div class="delivery__location location">
+                     <div class="location__schedule">
+                        <span class="location__time">Графік роботи: щодня з 9:00 до 18:00</span>
+                        <span class="location__address">м. Київ, пров. Ізяславський 52, пов. 2</span>
+                     </div>
+                     <a class="location__button" href="#" target="_blank">На мапі</a>
+                  </div>
+               </div>
+               <div class="form__payment payment">
+                  <h2 class="payment__sub-title sub-title">Вибір способу доставки</h2>
+                  <div class="payment__choise choise">
+                     <label for="cash" class="choise__label">
+                        <input name="payment" type="radio" id="cash" class="choise__input">
+                        <span class="choise__text">Готівкою при отриманні (Післясплата)</span>
+                     </label>
+                     <label for="card" class="choise__label">
+                        <input name="payment" type="radio" id="card" class="choise__input">
+                        <span class="choise__text">Оплата карткою на сайті</span>
+                        <img src="img/icons-main/mastercard.svg" alt="Логотип mastercard">
+                        <img src="img/icons-main/visa-card-logo.svg" alt="Логотип visa-card">
+                     </label>
+                     <label for="privatpay" class="choise__label">
+                        <input name="payment" type="radio" id="privatpay" class="choise__input">
+                        <span class="choise__text">Privat Pay</span>
+                        <img src="img/icons-main/privat-pay-logo.svg" alt="Логотип privat-pay">
+                     </label>
+                     <label for="credit" class="choise__label">
+                        <input name="payment" type="radio" id="credit" class="choise__input">
+                        <span class="choise__text">Кредит від Krovato</span>
+                     </label>
+                     <label for="privat-bank" class="choise__label">
+                        <input name="payment" type="radio" id="privat-bank" class="choise__input">
+                        <span class="choise__text">Оплата частинами ПриватБанк</span>
+                        <img src="img/icons-main/privaty-credit-logo.svg" alt="Логотип ПриватБанк">
+                     </label>
+                     <label for="mono-bank" class="choise__label">
+                        <input name="payment" type="radio" id="mono-bank" class="choise__input">
+                        <span class="choise__text">Оплата частинами МоноБанк</span>
+                        <img src="img/icons-main/mono-bank-logo.svg" alt="Логотип МоноБанк">
+                     </label>
+                  </div>
+               </div>
+               <div class="form__comment coments">
+                  <h2 class="coments__sub-title sub-title">Коментар до замовлення</h2>
+                  <textarea name="coments" class="coments__textarea" placeholder="Ваш коментар"></textarea>
+                  <div class="form__button">
+                     <button type="submit" class="button">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
+                  </div>
+               </div>
+            </form>
+            <div class="page__practice practice">
+               <h2 class="practice__title title">Практика</h2>
+               <form class="practice__form form-practice" enctype="multipart/form-data" action="#" method="post"
+                  name="form[]">
+                  <div class="form-practice__item">
+                     <label class="form-practice__label" for="surname">Ваше прізвище:</label>
+                     <input class="form-practice__input" id="surname" type="text" name="form[]" required placeholder="Прізвище">
+                  </div>
+                  <div class="form-practice__item">
+                     <label class="form-practice__label" for="name">Ваше ім'я:</label>
+                     <input class="form-practice__input" id="name" type="text" name="form[]" required placeholder="ім'я">
+                  </div>
+                  <div class="form-practice__item">
+                     <label class="form-practice__label" for="email">Електрона пошта:</label>
+                     <input class="form-practice__input" id="email" type="email" name="form[]" required placeholder="E-mail">
+                  </div>
+                  <div class="form-practice__item">
+                     <label class="form-practice__label" for="phone">Номер телефону:</label>
+                     <input class="form-practice__input" id="phone" type="tel" name="form[]" maxlength="12" required
+                        placeholder="Телефон">
+                  </div>
+                  <div class="form-practice__item">
+                     <label class="form-practice__label" for="data">Дата народження:</label>
+                     <input class="form-practice__input" id="data" type="date" name="form[]">
+                  </div>
+                  <div class="form-practice__item">
+                     <label class="form-practice__label" for="color">Оберіть улюблений колір:</label>
+                     <input class="form-practice__input form-practice__input--color" id="color" type="color" name="form[]"
+                        value="#f40606">
+                  </div>
+                  <div class="form-practice__item">
+                     <label class="form-practice__label" for="mood">Рівень настрою:</label>
+                     <input class="form-practice__input" id="mood" type="range" name="form[]" min="0" max="100" value="50">
+                  </div>
+                  <div class="form-practice__item">
+                     <label class="form-practice__label" for="language">Оберіть мову:</label>
+                     <select class="form-practice__select" name="form[]" id="language">
+                        <option value="UA">UA</option>
+                        <option value="EN">EN</option>
+                        <option value="PL">PL</option>
+                        <option value="DE">DE</option>
+                     </select>
+                  </div>
+                  <div class="form-practice__item">
+                     <label class="form-practice__label" for="foto">Додайте фото:</label>
+                     <input class="form-practice__input" id="foto" type="file" multiple accept=".jpg, .png" name="form[]">
+                  </div>
+                  <fieldset class="form-practice__checkbox checkbox">
+                     <legend class="checkbox__title">Улюблений тип відпочинку:</legend>
+                     <label class="checkbox__label" for="beach">
+                        <input class="checkbox__input" id="beach" type="checkbox">
+                        <span class="checkbox__text">Пляжний відпочинок</span>
+                     </label>
+                     <label class="checkbox__label" for="active">
+                        <input class="checkbox__input" id="active" type="checkbox">
+                        <span class="checkbox__text">Активний відпочинок</span>
+                     </label>
+                     <label class="checkbox__label" for="culture">
+                        <input class="checkbox__input" id="culture" type="checkbox">
+                        <span class="checkbox__text">Культурний відпочинок</span>
+                     </label>
+                     <label class="checkbox__label" for="food">
+                        <input class="checkbox__input" id="food" type="checkbox">
+                        <span class="checkbox__text">Гастрономічний відпочинок</span>
+                     </label>
+                     <label class="checkbox__label" for="spa">
+                        <input class="checkbox__input" id="spa" type="checkbox">
+                        <span class="checkbox__text">Спа-відпочинок</span>
+                     </label>
+                  </fieldset>
+                  <fieldset class="form-practice__radio radio">
+                     <legend class="radio__title">Ваша релігія:</legend>
+                     <label class="radio__label" for="сhristianity">
+                        <input class="radio__input" id="сhristianity" name="form[]" type="radio">
+                        <span class="radio__text">Християнство</span>
+                     </label>
+                     <label class="radio__label" for="Islam">
+                        <input class="radio__input" id="Islam" name="form[]" type="radio">
+                        <span class="radio__text">Іслам</span>
+                     </label>
+                     <label class="radio__label" for="buddhism">
+                        <input class="radio__input" id="buddhism" name="form[]" type="radio">
+                        <span class="radio__text">Буддизм</span>
+                     </label>
+                     <label class="radio__label" for="atheism">
+                        <input class="radio__input" id="atheism" name="form[]" type="radio">
+                        <span class="radio__text">Атеїзм</span>
+                     </label>
+                  </fieldset>
+                  <div class="form-practice__buttons">
+                     <button class="form-practice__button" type="reset">Очистити форму</button>
+                     <button class="form-practice__button" type="submit">Відправити форму</button>
+                  </div>
+
+               </form>
+            </div>
+         </div>
+      </main>
+
+      <footer class="footer">
+         <div class="footer__container">
+            <a target="_blank" class="footer__link" href="continued.html">*Весна 2024*</a>
+         </div>
+      </footer>
+   </div>
+</body>
+
+</html>
