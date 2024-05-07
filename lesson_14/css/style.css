@@ -163,6 +163,9 @@ body {
    border-bottom: 2px solid #F8F8F8
 }
 .main-header__catalog {
+   display: flex;
+   gap: 10px;
+   align-items: center;
    padding: 11px 20px;
    background-color: #FFBC57;
    color: #fff;
@@ -177,11 +180,9 @@ body {
 }
 .main-header__catalog::before{
    content: "";
-   background: url("../img/icons-header/menu-catalog.svg") 0 0  no-repeat;
+   background: url("../img/icons-header/menu-catalog.svg") 0 0 / 24px no-repeat;
    width: 24px;
    height: 24px;
-   margin-right: 10px;
-   vertical-align: middle;
 }
 .search {
    position: relative;
