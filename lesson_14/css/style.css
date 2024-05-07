@@ -343,7 +343,7 @@ body {
 .body-info__input:hover{
    outline: 2px solid #D1D5D5;
 }
-.body-info__recipient {
+.info__recipient {
 	position: relative;
 	cursor: pointer;
 }
@@ -461,6 +461,7 @@ body {
 /* ============   Map  ================== */
 .location {
    display: flex;
+   flex-wrap: wrap;
    align-items: center;
    gap: 20px;
    background-color: #F8F8F8;
