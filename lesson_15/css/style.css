@@ -441,10 +441,6 @@ body {
 }
 @media(max-width: 1050px){
    .bottom-header__container{
-      position: relative;
-
-   }
-   .bottom-header__container{
       flex-direction: column;
       gap: 20px;
       align-items: flex-start;
