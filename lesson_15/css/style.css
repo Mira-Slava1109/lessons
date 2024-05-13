@@ -441,6 +441,12 @@ body {
 }
 @media(max-width: 1050px){
    .bottom-header__container{
+
+   }
+   .bottom-header__container{
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
       position: absolute;
       top: 0; 
       left: -100%;
@@ -451,7 +457,7 @@ body {
       transition: all 0.3s;
    }
    :has(.burger__input:checked) .bottom-header__container{
-      display: block;
+      display: flex;
       left: 0;
    }
    :has(.burger__input:focus:checked) .burger__icon span{
@@ -465,14 +471,9 @@ body {
 		top: 50%;
 		transform: rotate(-45deg) translate(0px, -50%);
    }
-   .bottom-header__container{
-      flex-direction: column;
-      gap: 20px;
-      align-items: flex-start;
-   }
    .bottom-header__list{
       flex-direction: column;
-      gap: 20px;
+
    }
 }
 /* ===========================   Footer  ================================ */
