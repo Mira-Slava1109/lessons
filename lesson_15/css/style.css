@@ -323,8 +323,8 @@ body {
       flex-shrink: 0;
 		display: block;
 		position: relative;
-		height: 15px;
-		width: 25px;
+		height: 18px;
+		width: 30px;
 		z-index: 2;
 	}
    .burger__input{
@@ -335,7 +335,7 @@ body {
 	.burger__icon span {
 		content: "";
 		height: 2px;
-		width: 25px;
+		width: 30px;
       background-color: #2B2929;
 		position: absolute;
 		left: 0;
@@ -399,6 +399,7 @@ body {
 /* ================================ */
 .header__bottom {}
 .bottom-header {
+   position: relative;
    background-color: #fff;
 }
 .bottom-header__container {
@@ -440,16 +441,17 @@ body {
 }
 @media(max-width: 1050px){
    .bottom-header__container{
-      position: relative;
+      position: absolute;
       top: 0; 
       left: -100%;
       width: 100%;
-      height: 100%;
+      min-height: 100%;
       background-color: #FAFBFD;
       padding: 20px 15px;
-      transition: left 0.3s;
+      transition: all 0.3s;
    }
    :has(.burger__input:checked) .bottom-header__container{
+      display: block;
       left: 0;
    }
    :has(.burger__input:focus:checked) .burger__icon span{
