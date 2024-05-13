@@ -205,6 +205,7 @@ body {
 }
 .phone__content {
    position: relative;
+   z-index: 10;
    }
 .phone__head {
    display: flex;
@@ -412,7 +413,6 @@ body {
    align-items: center;
    padding: 10px;
 }
-
 .bottom-header__proposals{}
 .bottom-header__rooms{}
 
@@ -441,6 +441,7 @@ body {
 }
 @media(max-width: 1050px){
    .bottom-header__container{
+      position: relative;
 
    }
    .bottom-header__container{
@@ -453,7 +454,7 @@ body {
       width: 100%;
       min-height: 100%;
       background-color: #FAFBFD;
-      padding: 20px 15px;
+      padding: 20px;
       transition: all 0.3s;
    }
    :has(.burger__input:checked) .bottom-header__container{
