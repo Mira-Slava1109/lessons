@@ -510,11 +510,11 @@ body {
    @media (max-width: 650px){
       .bottom-header__container {
          position: fixed;
-         top: 136px;
+         top: 134px;
          right: -100%;
          width: 100%;
          width:  min(320px, 100%);
-         height: calc(100% - 136px);
+         height: calc(100% - 134px);
    }
    :has(.burger__input:checked) .bottom-header__container{
       right: 0;
