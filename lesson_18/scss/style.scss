@@ -61,8 +61,8 @@ body {
       background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 50%, rgba(36, 0, 255, 1));
       position: absolute;
       bottom: -28.571429%; /* 20/70 */
-      @media (max-width: 767.98px){
-         bottom: -10%; 
+      @media (max-width: 767.98px) {
+         bottom: -10%;
       }
    }
 }
@@ -81,7 +81,7 @@ body {
       align-items: center;
       gap: 15px;
       padding-block: 50px 10px;
-      @media (max-width: 767.98px){
+      @media (max-width: 767.98px) {
          min-height: 110px;
       }
    }
@@ -237,7 +237,6 @@ body {
       &:not(:last-child) {
          @include adaptiveValue("margin-bottom", 80, 40);
       }
-      
    }
 }
 .person {
@@ -314,7 +313,7 @@ body {
       background-color: #6f00a9;
       line-height: 20px;
       text-transform: uppercase;
-      @media (max-width: 767.98px){
+      @media (max-width: 767.98px) {
          padding: 8px 40px;
       }
    }
@@ -337,7 +336,7 @@ body {
          padding-bottom: 12px;
          padding-top: 11%;
       }
-      @media (max-width: 450px){
+      @media (max-width: 450px) {
          padding-bottom: 50px;
       }
    }
@@ -415,6 +414,7 @@ body {
       @include adaptiveValue("width", 480, 120, 0, $containerWidth, 450);
       @include adaptiveValue("height", 480, 120, 0, $containerWidth, 450);
       border-radius: 50%;
+      position: absolute;
       opacity: 0.3;
       filter: blur(50px);
       background: linear-gradient(
@@ -424,7 +424,9 @@ body {
          rgba(255, 0, 0, 0.6) 67%,
          rgba(36, 0, 255, 0.6) 100%
       );
-      position: absolute;
+      @media (max-width: 767.98px) {
+         filter: blur(40px);
+      }
    }
 
    &__item--left {
@@ -467,7 +469,7 @@ body {
 }
 .about-page {
    background: url("../img/about/background.webp") center / contain no-repeat;
-   @media (max-width: 767.98px){
+   @media (max-width: 767.98px) {
       background: none;
    }
 
@@ -504,12 +506,10 @@ body {
       }
       &:not(:last-child) {
          margin-bottom: 40px;
-         @media (max-width: 767.98px){
+         @media (max-width: 767.98px) {
             margin-bottom: 24px;
          }
       }
-      
-
    }
    &__text {
       @extend .info-person__text;
