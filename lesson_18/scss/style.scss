@@ -12,6 +12,8 @@
 
 @import "_mixins.scss";
 
+
+
 // Мінімальна ширина сторінки
 $minWidth: 320;
 // Ширина полотна (макету)
@@ -26,11 +28,19 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 
 $backgroundColor: rgba(0, 0, 0);
 $textColor: #fff;
+$fontSize: 18px;
+$fontFamily:  "Exo";
+
+$breakpoint-lg: 991.98px;
+$breakpoint-md: 767.98px;
+$breakpoint-sm: 450px;
+
 
 body {
-   font-family: "Exo", sans-serif;
+   font-family: $fontFamily, sans-serif;
    color: $textColor;
    background-color: $backgroundColor;
+   font-size: $fontSize;
 }
 .wrapper {
    min-height: 100%;
@@ -47,25 +57,8 @@ body {
    padding: 0 15px;
 }
 
-.title {
-   @include adaptiveValue("font-size", 60, 24);
-   display: inline-block;
-   font-size: 60px;
-   font-weight: 700;
-   line-height: 70px;
-   text-transform: uppercase;
-   &::after {
-      content: "";
-      height: 1px;
-      width: 133%;
-      background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 50%, rgba(36, 0, 255, 1));
-      position: absolute;
-      bottom: -28.571429%; /* 20/70 */
-      @media (max-width: 767.98px) {
-         bottom: -10%;
-      }
-   }
-}
+@import "_common.scss"; 
+
 /*=================  header===============================*/
 .header {
    position: sticky;
@@ -81,7 +74,7 @@ body {
       align-items: center;
       gap: 15px;
       padding-block: 50px 10px;
-      @media (max-width: 767.98px) {
+      @media (max-width: $breakpoint-md) {
          min-height: 110px;
       }
    }
@@ -106,7 +99,7 @@ body {
       display: flex;
       flex-wrap: wrap;
       @include adaptiveValue("column-gap", 60, 20, 0, $containerWidth, 991.98);
-      @media (max-width: 991.98px) {
+      @media (max-width: $breakpoint-lg) {
          flex-direction: column;
          gap: 30px;
          align-items: center;
@@ -121,7 +114,7 @@ body {
             background-color: #6f00a9;
          }
       }
-      @media (max-width: 991.98px) {
+      @media (max-width: $breakpoint-lg) {
          font-size: 24px;
       }
    }
@@ -151,7 +144,7 @@ body {
 /*===  Menu-icon burger  ==*/
 .menu-icon {
    display: none;
-   @media (max-width: 991.98px) {
+   @media (max-width: $breakpoint-lg) {
       display: block;
       position: relative;
       width: 30px;
@@ -248,25 +241,24 @@ body {
 }
 /* ============== Info-person-text==============================*/
 .info-person {
-   @media (min-width: 767.98px) {
+   @media (min-width: $breakpoint-md) {
       padding-top: 28px;
       padding-bottom: 30px;
       flex-basis: 584px;
    }
-   @media (max-width: 767.98px) {
+   @media (max-width: $breakpoint-md) {
       align-self: center;
       flex-basis: 320px;
    }
 
    & > *:not(:last-child) {
       margin-bottom: 20px;
-      @media (max-width: 599.98px) {
+      @media (max-width: 600px) {
          margin-bottom: 12px;
       }
    }
    &__name {
       display: inline-block;
-      font-size: 18px;
       line-height: 1.11;
       letter-spacing: -0.02em;
       padding-right: 32px;
@@ -279,7 +271,7 @@ body {
          display: block;
          margin-top: 10px;
       }
-      @media (max-width: 767.98px) {
+      @media (max-width: $breakpoint-md) {
          font-size: 14px;
          line-height: 1.07; /* 15/14 */
       }
@@ -289,18 +281,13 @@ body {
       font-weight: 700;
       line-height: 0.875; /* 70/80 */
       text-transform: uppercase;
-      @media (max-width: 599.98px) {
+      @media (max-width: 600px) {
          line-height: 1.09;
       }
    }
 
    &__text {
-      font-size: 18px;
-      line-height: 1.5;
-      letter-spacing: -0.32px;
-      text-transform: capitalize;
-      @media (max-width: 470px) {
-         font-size: 14px;
+      @media (max-width: $breakpoint-sm) {
          line-height: 1.07;
       }
    }
@@ -313,10 +300,16 @@ body {
       background-color: #6f00a9;
       line-height: 20px;
       text-transform: uppercase;
-      @media (max-width: 767.98px) {
+      transition: all 0.3s;
+      @media (max-width: $breakpoint-md) {
          padding: 8px 40px;
       }
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: #0B0045;
+         }
    }
+}
 }
 /*==========   Image-person =======================*/
 .person {
@@ -329,14 +322,14 @@ body {
       margin-right: -57px;
       align-items: flex-end;
 
-      @media (max-width: 767.98px) {
+      @media (max-width: $breakpoint-md) {
          flex: 0 0 28%; /* 109/393 */
          margin-right: -15px;
          justify-content: flex-end;
          padding-bottom: 12px;
          padding-top: 11%;
       }
-      @media (max-width: 450px) {
+      @media (max-width: $breakpoint-sm) {
          padding-bottom: 50px;
       }
    }
@@ -353,20 +346,20 @@ body {
    &__lightning-left {
       object-fit: cover;
       aspect-ratio: 377 / 315;
-      @media (min-width: 768px) {
+      @media (min-width: $breakpoint-md) {
          width: percent(377, 688);
          position: absolute;
          bottom: 0;
          left: 0;
       }
-      @media (max-width: 767.98px) {
+      @media (max-width: $breakpoint-md) {
          width: 100%;
       }
    }
 
    &__lightning-right {
       display: none;
-      @media (min-width: 767.87px) {
+      @media (min-width: $breakpoint-md) {
          width: percent(322, 688);
          display: block;
          position: absolute;
@@ -384,7 +377,7 @@ body {
       transform: rotate(-45deg);
       object-fit: cover;
       aspect-ratio: 110 / 136;
-      @media (max-width: 767.98px) {
+      @media (max-width: $breakpoint-md) {
          width: 26.605505%; /* 29/109 */
          left: 2%;
          transform: rotate(-15deg);
@@ -397,7 +390,7 @@ body {
       right: 13%;
       transform: rotate(30deg);
       aspect-ratio: 70 / 88;
-      @media (max-width: 767.98px) {
+      @media (max-width: $breakpoint-md) {
          width: 18.348624%; /* 20/109 */
          left: 36.697248%; /* 40/109 */
       }
@@ -469,7 +462,7 @@ body {
 }
 .about-page {
    background: url("../img/about/background.webp") center / contain no-repeat;
-   @media (max-width: 767.98px) {
+   @media (max-width: $breakpoint-md) {
       background: none;
    }
 
@@ -484,7 +477,7 @@ body {
    }
    &__image {
       display: none;
-      @media (max-width: 767.98px) {
+      @media (max-width: $breakpoint-md) {
          display: block;
          text-align: center;
          overflow: hidden;
@@ -500,20 +493,20 @@ body {
 
    &__title {
       position: relative;
-      // padding: 0 5%;
       &::after {
          left: -16.666667%; /* -50/300 */
       }
       &:not(:last-child) {
          margin-bottom: 40px;
-         @media (max-width: 767.98px) {
+         @media (max-width: $breakpoint-md) {
             margin-bottom: 24px;
          }
       }
    }
    &__text {
-      @extend .info-person__text;
-      line-height: 2.14; /* 30/14 */
+      @media (max-width: $breakpoint-md) {
+         line-height: 2.14; /* 30/14 */
+      }
    }
 
    &__list {
@@ -524,7 +517,7 @@ body {
    }
 
    &__item {
-      @include adaptiveValue("font-size", 20, 15);
+      font-size: 20px;
       font-family: "Orbitron", sans-serif;
       font-weight: 500;
       line-height: 1.25; /* 25/20 */
@@ -539,6 +532,9 @@ body {
          height: 10px;
          background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(66, 255, 0, 1) 50%, rgba(36, 0, 255, 1));
          border-radius: 50%;
+      }
+      @media (max-width: $breakpoint-md) {
+         font-size: 15px;
       }
    }
 }
@@ -555,8 +551,8 @@ body {
 .edits-page {
    position: relative;
    &__container {
-      @include adaptiveValue("padding-top", 200, 20);
-      @include adaptiveValue("padding-bottom", 200, 20);
+      @include adaptiveValue("padding-top", 120, 20);
+      @include adaptiveValue("padding-bottom", 120, 20);
       &::before {
          content: "";
          width: 100%;
@@ -668,3 +664,17 @@ body {
       }
    }
 }
+
+/*===================      Footer      =======================*/
+.footer {
+
+   &__container {
+      display: flex;
+      justify-content: center;
+      padding-block: 20px;
+   }
+
+   &__link {
+   }
+}
+
