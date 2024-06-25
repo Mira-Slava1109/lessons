@@ -1,0 +1,124 @@
+@use "sass:math";
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,600&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500&display=swap");
+
+@import "_fonts.scss";
+
+@import "_reset.scss";
+
+@import "_mixins.scss";
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1320;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$backgroundColor: #eaebee;
+$textColor: #000000;
+$fontMain: "Roboto", sans-serif;
+
+$breakpoint-lg: 991.98px;
+$breakpoint-md: 767.98px;
+$breakpoint-sm: 450px;
+
+body {
+   font-family: $fontMain;
+   color: $textColor;
+   background-color: $backgroundColor;
+   font-size: 20px;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+   display: flex;
+   flex-direction: column;
+}
+.wrapper > main {
+   flex-grow: 1;
+}
+[class*="__container"] {
+   max-width: toPx($containerWidth);
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+.header {
+   &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 7.5rem;
+      padding-block: 10px;
+   }
+   &__title {
+      font-size: 34px;
+      font-weight: 600;
+   }
+}
+.page {
+   &__container {
+   }
+   &__task {
+   }
+}
+.task {
+   &:not(:last-child) {
+      margin-bottom: 20px;
+   }
+   &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-block: 40px;
+      background-color: rgb(207, 207, 230);
+      border-radius: 30px;
+   }
+   &__title {
+      font-size: 26px;
+      font-weight: 600;
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+   }
+   &__question {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h3 {
+         font-weight: 600;
+      }
+   }
+   &__list {
+   }
+   &__choice {
+   }
+   &__answer {
+      span {
+         text-transform: capitalize;
+         font-weight: 600;
+         color: #7c4141;
+         font-style: italic;
+      }
+   }
+}
+.footer {
+   &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50px;
+      padding-block: 10px;
+   }
+   &__link {
+      font-weight: 600;
+   }
+}
