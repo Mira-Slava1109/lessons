@@ -1,0 +1,108 @@
+@use "sass:math";
+
+@import url("https://fonts.googleapis.com/css?family=Quicksand:500,600,700&display=swap");
+
+@import "_fonts.scss";
+
+@import "_reset.scss";
+
+@import "_mixins.scss";
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1240;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$backgroundColor: #fbfbfd;
+$textColor: #0d1216;
+$fontMain: "Quicksand", sans-serif;
+
+$breakpoint-lg: toEm(991.98);
+$breakpoint-md: toEm(767.98);
+$breakpoint-sm: toEm(450);
+
+body {
+   font-family: $fontMain;
+   color: $textColor;
+   background-color: $backgroundColor;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+   display: flex;
+   flex-direction: column;
+}
+.wrapper > main {
+   flex-grow: 1;
+}
+[class*="__container"] {
+   max-width: toPx($containerWidth);
+   margin: 0 auto;
+   padding: 0 0.9375rem;
+}
+
+@import "_header.scss";
+
+@import "_main.scss";
+
+.link {
+   padding-inline: toRem(5);
+   border-radius: toRem(4);
+   transition: all 0.3s;
+   @media (any-hover: hover) {
+      &:hover {
+         background: linear-gradient(90deg, rgba(0, 196, 204, 1) 0%, rgba(139, 61, 255, 1) 100%);
+         color: #fff;
+      }
+   }
+}
+/*============================================================*/
+.footer {
+   // border-top: 1px solid #78848C;
+   background-color: #fff;
+
+   // .footer__container
+
+   &__container {
+      min-height: toRem(100);
+      padding-block: toRem(10);
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: toRem(20);
+      row-gap: toRem(10);
+      align-items: center;
+      justify-content: space-between;
+      font-size: toRem(14);
+      font-weight: 600;
+      line-height: 1.7143; /* 24/14 */
+      @media (max-width: toRem(640)) {
+         justify-content: center;
+      }
+   }
+}
+.support {
+   // .support__list
+
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: toRem(30);
+      row-gap: toRem(10);
+      @media (max-width: $breakpoint-md) {
+         column-gap: toRem(15);
+      }
+   }
+
+   //  .support__link
+   &__link {
+      line-height: 1.7143;
+   }
+}
