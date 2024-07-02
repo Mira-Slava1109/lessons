@@ -84,7 +84,7 @@
    }
    &::after {
       background: url("../img/main/line-right.svg") 0 0 / contain no-repeat;
-      @include adaptiveValue("left", 416, 236);
+      @include adaptiveValue("left", 421, 257);
       @media (max-width: $breakpoint-md) {
          left: calc(100% - toRem(65));
       }
