@@ -1,7 +1,5 @@
 @use "sass:math";
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,600&display=swap");
-
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500&display=swap");
 
 @import "_fonts.scss";
@@ -26,15 +24,14 @@ $backgroundColor: #eaebee;
 $textColor: #000000;
 $fontMain: "Roboto", sans-serif;
 
-$breakpoint-lg: 991.98px;
-$breakpoint-md: 767.98px;
-$breakpoint-sm: 450px;
+$breakpoint-lg: toEm(991.98);
+$breakpoint-md: toEm(767.98);
+$breakpoint-sm: toEm(450);
 
 body {
    font-family: $fontMain;
    color: $textColor;
    background-color: $backgroundColor;
-   font-size: 20px;
 }
 .wrapper {
    min-height: 100%;
@@ -48,7 +45,7 @@ body {
 [class*="__container"] {
    max-width: toPx($containerWidth);
    margin: 0 auto;
-   padding: 0 15px;
+   padding: 0 0.9375rem;
 }
 
 .header {
@@ -57,10 +54,10 @@ body {
       justify-content: center;
       align-items: center;
       min-height: 7.5rem;
-      padding-block: 10px;
+      padding-block: 0.625rem;
    }
    &__title {
-      font-size: 34px;
+      font-size: 2.125rem;
       font-weight: 600;
    }
 }
@@ -72,27 +69,28 @@ body {
 }
 .task {
    &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
    }
    &__container {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      padding-block: 40px;
+      gap: 1.25rem;
+      padding-block: 2.5rem;
       background-color: rgb(207, 207, 230);
-      border-radius: 30px;
+      border-radius: 1.875rem;
    }
    &__title {
-      font-size: 26px;
+      font-size: 1.625rem;
       font-weight: 600;
       &:not(:last-child) {
-         margin-bottom: 20px;
+         margin-bottom: 1.25rem;
       }
+      
    }
    &__question {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 1.25rem;
       h3 {
          font-weight: 600;
       }
@@ -115,8 +113,8 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 50px;
-      padding-block: 10px;
+      min-height: 3.125rem;
+      padding-block: 0.625rem;
    }
    &__link {
       font-weight: 600;
