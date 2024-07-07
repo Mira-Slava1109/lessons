@@ -1,0 +1,116 @@
+@use "sass:math";
+
+// @import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500&display=swap");
+
+@import "_fonts.scss";
+
+@import "_reset.scss";
+
+@import "_mixins.scss";
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1320;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$backgroundColor: #eaebee;
+$textColor: #000000;
+$fontMain: "Roboto", sans-serif;
+
+$breakpoint-lg: toEm(991.98);
+$breakpoint-md: toEm(767.98);
+$breakpoint-sm: toEm(450);
+
+body {
+   font-family: $fontMain;
+   color: $textColor;
+   background-color: $backgroundColor;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+   display: flex;
+   flex-direction: column;
+}
+.wrapper > main {
+   flex-grow: 1;
+}
+[class*="__container"] {
+   max-width: toPx($containerWidth);
+   margin: 0 auto;
+   padding: 0 0.9375rem;
+}
+
+.header {
+   &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 7.5rem;
+      padding-block: 0.625rem;
+   }
+   &__title {
+      font-size: 2.125rem;
+      font-weight: 600;
+   }
+}
+
+.task {
+   &:not(:last-child) {
+      margin-bottom: 1.25rem;
+   }
+   &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      padding-block: 2.5rem;
+      background-color: rgb(207, 207, 230);
+      border-radius: 1.875rem;
+   }
+   &__title {
+      font-size: 1.625rem;
+      font-weight: 600;
+      &:not(:last-child) {
+         margin-bottom: 1.25rem;
+      }
+   }
+   &__question {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      h3 {
+         font-weight: 600;
+      }
+   }
+   &__answer {
+      span {
+         font-weight: 600;
+         margin-bottom: toRem(10);
+      }
+      p:not(:last-child) {
+         margin-bottom: toRem(8);
+      }
+      ol{
+         padding-left: toRem(15);
+      }
+   }
+}
+.footer {
+   &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 3.125rem;
+      padding-block: 0.625rem;
+   }
+   &__link {
+      font-weight: 600;
+   }
+}
