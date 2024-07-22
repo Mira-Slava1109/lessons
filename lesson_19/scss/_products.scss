@@ -96,7 +96,8 @@
       overflow: hidden;
       @media (any-hover: hover) {
          &:hover .actions,
-         &:focus-visible .actions {
+         &:focus-visible .actions,
+         &:focus-within .actions {
             opacity: 1;
             visibility: visible;
          }
@@ -202,6 +203,7 @@
    flex-direction: column;
    gap: 16px;
    flex-grow: 1;
+   line-height: 1.375; /* 22/16 */
 
    // .footer-card__title
 
