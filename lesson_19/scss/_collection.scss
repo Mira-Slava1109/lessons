@@ -94,6 +94,9 @@
          justify-content: center;
          padding-right: 0;
       }
+      @media (max-width: 500px) {
+         padding-inline: 15px;
+      }
       // .image-collections__content
       &__content {
          flex: 0 1 424px;
