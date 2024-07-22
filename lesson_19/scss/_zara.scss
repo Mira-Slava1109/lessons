@@ -1,0 +1,129 @@
+.zara {
+   background-color: #10131a;
+   position: relative;
+
+   // .zara__container
+
+   &__container {
+      display: flex;
+      justify-content: flex-end;
+      color: #fff;
+      position: relative;
+      @media (max-width: $breakpoint-md) {
+         justify-content: flex-start;
+      }
+   }
+
+   // .zara__content
+
+   &__content {
+      position: relative;
+      z-index: 2;
+      flex: 0 1 537px;
+      padding-right: 33px;
+      @include adaptiveValue("padding-top", 233, 40);
+      @include adaptiveValue("padding-bottom", 93, 40);
+      @media (max-width: $breakpoint-md) {
+         padding-right: 0px;
+         flex: 0 1 504px;
+      }
+   }
+
+   // .zara__logo
+
+   &__logo {
+      width: 191px;
+      object-fit: cover;
+      aspect-ratio: 191 / 81;
+      &:not(:last-child) {
+         margin-bottom: 40px;
+      }
+      @media (max-width: $breakpoint-md) {
+         width: 160px;
+         &:not(:last-child) {
+            margin-bottom: 20px;
+         }
+      }
+      @media (max-width: $breakpoint-sm) {
+         width: 130px;
+      }
+   }
+
+   // .zara__text
+
+   &__text {
+      font-size: 26px;
+      line-height: 1.8;
+      &:not(:last-child) {
+         margin-bottom: 55px;
+      }
+      @media (max-width: $breakpoint-md) {
+         font-size: 18px;
+         &:not(:last-child) {
+            margin-bottom: 20px;
+         }
+      }
+   }
+
+   // .zara__button
+
+   &__button {
+      font-size: 29px;
+      line-height: 1.2;
+      background-color: #fff;
+      padding: 19px 26px;
+      color: #1e2832;
+      text-transform: capitalize;
+      transition: all 0.5s;
+      @media (max-width: $breakpoint-md) {
+         font-size: 20px;
+         padding: 12px 18px;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: #ff6f61;
+            color: #fff;
+         }
+      }
+   }
+
+   // .zara__decor
+
+   &__decor {
+      width: 55%;
+      position: absolute;
+      top: 55px;
+      @include adaptiveValue("right", -340, 190);
+      z-index: 1;
+      img {
+         width: 100%;
+         object-fit: cover;
+         aspect-ratio: 732 / 309;
+      }
+      @media (max-width: $breakpoint-md) {
+         display: none;
+      }
+   }
+
+   //.zara__background
+
+   &__background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+      @media (max-width: $breakpoint-md) {
+         transform: scale(-1, 1);
+      }
+      @media (max-width: $breakpoint-sm) {
+         display: none;
+      }
+   }
+}

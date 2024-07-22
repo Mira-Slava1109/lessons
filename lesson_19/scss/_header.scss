@@ -1,0 +1,261 @@
+.header {
+   font-family: $fontDetail;
+   background-color: #f4f4f5;
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 50;
+}
+/*==================================   Header_Top   ====================================*/
+
+.top-header {
+   position: relative;
+   background-color: #f4f4f5;
+   z-index: 60;
+
+   //  .top-header__container
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      min-height: 90px;
+      padding-block: 10px;
+      border-bottom: 1px solid #e3e3e3;
+      @media (max-width: $breakpoint-md) {
+         min-height: 60px;
+      }
+      @media (max-width: $breakpoint-sm) {
+         gap: 10px;
+      }
+   }
+//  .top-header__button
+   &__button {
+      flex: 1;
+   }
+//  .top-header__logo
+   &__logo {
+      flex: 0 1 180px;
+
+   }
+   &__action {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;
+   }
+}
+.button {
+   &__icon-search {
+      width: 25px;
+      height: 25px;
+      background: url("../img/header/icon-search.svg") center / 20px no-repeat;
+      transition: background 0.5s;
+      @media (any-hover: hover) {
+         &:hover {
+            background: url("../img/header/icon-search-hover.svg") center / 20px no-repeat;
+         }
+      }
+   }
+}
+.action-top-header {
+   color: #1e2832;
+   display: flex;
+   align-items: center;
+   gap: 22px;
+   @media (max-width: $breakpoint-sm) {
+      gap: 10px;
+   }
+   &__link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.5s;
+      span {
+         font-size: 18px;
+         @media (max-width: $breakpoint-lg) {
+            display: none;
+         }
+      }
+      &::before {
+         content: "";
+         width: 25px;
+         height: 25px;
+      }
+      &--account {
+         background: url("../img/header/icon-account.svg") center left / 20px no-repeat;
+         @media (any-hover: hover) {
+            &:hover {
+               background: url("../img/header/icon-account-hover.svg") center left / 20px no-repeat;
+            }
+         }
+      }
+      &--shopping {
+         background: url("../img/header/icon-shopping.svg") center left / 20px no-repeat;
+         @media (any-hover: hover) {
+            &:hover {
+               background: url("../img/header/icon-shopping-hover.svg") center left / 20px no-repeat;
+            }
+         }
+      }
+   }
+}
+/*==================================   Header_Bottom  ====================================*/
+.bottom-header {
+   &__container {
+      min-height: 54px;
+      padding-block: 30px 10px;
+      position: relative;
+      transition: all 0.5s;
+         @media (max-width: $breakpoint-md) {
+         position: fixed;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         padding-block: 120px 30px;
+         background-color: #1e2832;
+         visibility: hidden;
+         opacity: 0;
+         overflow: auto;
+         .menu-open &{
+            visibility: visible;
+            opacity: 1;
+         }
+      }
+   }
+   &__menu {
+   }
+
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 10px;
+      justify-content: space-between;
+      align-items: flex-end;
+      @media (max-width: $breakpoint-md) {
+         flex-direction: column;
+         row-gap: 30px;
+         color: #fff;
+         align-items: center;
+         font-size: 24px;
+      }
+   }
+
+   &__item {
+   }
+
+   &__link {
+      line-height: 1.5;
+      transition: color 0.5s;
+      @media (any-hover: hover) {
+         &:hover {
+            color: #ff6f61;
+         }
+      }
+   }
+}
+/*==================================   Header _Form  ====================================*/
+.search-header {
+   padding: 15px 0;
+   position: absolute;
+   z-index: 3;
+   inset-inline: 0;
+   visibility: hidden;
+   opacity: 0;
+   box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.1);
+   background-color: #f4f4f5;
+   transition: all 0.3s;
+
+   .search__open & {
+      visibility: visible;
+      opacity: 1;
+   }
+
+   &__container {
+      display: flex;
+      gap: 26px;
+   }
+
+   &__field {
+   }
+
+   &__submit {
+   }
+}
+.field {
+   padding: 15px;
+   border-bottom: 2px solid #000;
+   transition: color 0.3s;
+   &::-webkit-search-decoration,
+   &::-webkit-search-cancel-button {
+      display: none;
+   }
+   @media (any-hover: hover) {
+      &:hover {
+         border-color: #ff6f61;
+      }
+   }
+}
+.submit {
+   padding: 15px;
+   border-bottom: 2px solid #000;
+   transition: color 0.3s;
+   @media (any-hover: hover) {
+      &:hover {
+         border-color: #ff6f61;
+         color: #ff6f61;
+      }
+   }
+}
+/*=======================  Menu_Burger ======================================*/
+.menu-icon {
+   display: none;
+   @media (max-width: $breakpoint-md) {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 18px;
+      transition: all 0.3s;
+      &::before,
+      &::after {
+         content: "";
+      }
+
+      span,
+      &::before,
+      &::after {
+         position: absolute;
+         width: 100%;
+         height: 2px;
+         left: 0;
+         background-color: $textColor;
+         transition: all 0.3s;
+      }
+
+      &::before {
+         top: 0;
+      }
+      span {
+         top: 50%;
+         transform: translate(0, -50%);
+      }
+      &::after {
+         bottom: 0;
+      }
+      .menu-open & {
+         span {
+            display: none;
+         }
+         &::before {
+            top: 50%;
+            transform: rotate(-45deg) translate(0px, -50%);
+         }
+         &::after {
+            bottom: 50%;
+            transform: rotate(45deg) translate(0px, 50%);
+         }
+      }
+   }
+}
+

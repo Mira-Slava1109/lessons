@@ -1,0 +1,39 @@
+.page {
+
+   &__brand {
+   }
+}
+.brand {
+
+   &__container {
+      @include adaptiveValue("padding-top", 90, 40, 0, $containerWidth, 767.98);
+      @include adaptiveValue("padding-bottom", 90, 40, 0, $containerWidth, 767.98);
+   }
+
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 20px;
+      row-gap: 10px;
+      @media (max-width: 1120px) {
+         justify-content: space-around;
+      }
+   }
+
+   &__item {
+      flex: 0 1 200px;
+   }
+
+   &__likn {
+   }
+
+   &__image {
+      width: 100%;
+      // height: 100%;
+      object-fit: contain;
+      aspect-ratio: 200 / 70;
+   }
+}
+

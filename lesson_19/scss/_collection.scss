@@ -1,0 +1,145 @@
+.collections {
+   background-color: rgba(30, 40, 50, 0.05);
+   position: relative;
+   @media (min-width: $breakpoint-md) {
+         &::before{
+            content: "";
+            width: 123px;
+            height: 123px;
+            background: url("../img/collections/branch-small.svg") 0 0 / contain no-repeat;
+            position: absolute;
+            bottom: 12%;
+            left: 0;
+         }
+         &::after{
+            content: "";
+            width: 215px;
+            height: 326px;
+            background: url("../img/collections/branch-big.svg") 0 0 / contain no-repeat;
+            position: absolute;
+            bottom: 22%; /* 156/702 */
+            right: 0;
+         }
+   }
+
+   // collections__container
+   &__container {
+      padding-top: 80px;
+      padding-bottom: 60px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      // @include adaptiveValue("gap", 98, 40, 0, $containerWidth, 991.98);
+      @media (max-width: $breakpoint-md) {
+         padding-top: 40px;
+         padding-bottom: 40px;
+      }
+      @media (max-width: 630px) {
+         flex-direction: column-reverse;
+      }
+   }
+   // collections__content
+   &__content {
+      flex: 0 1 686px;
+      @include adaptiveValue("padding-top", 74, 0, 0, $containerWidth, 767.98);
+      @media (max-width: 630px) {
+         flex-basis: auto;
+      }
+   }
+   // collections__title
+   &__title {
+      @include adaptiveValue("font-size", 74, 42);
+      font-weight: 300;
+      line-height: 1.34; /* 74/55 */
+      &:not(:last-child) {
+         margin-bottom: 52px;
+         @include adaptiveValue("margin-bottom", 52, 20, 0, $containerWidth, 991.98);
+      }
+   }
+   // collections__text
+   &__text {
+      font-size: 30px;
+      line-height: 1.83; /* 55/30 */
+      letter-spacing: 0;
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 66, 20, 0, $containerWidth, 991.98);
+         @media (max-width: $breakpoint-md) {
+            font-size: 24px;
+            line-height: 1.7; /* 55/30 */
+         }
+      }
+   }
+   // collections__button
+   &__button {
+      color: #fff;
+      background-color: #1e2832;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      &:before {
+         content: "";
+         width: 30px;
+         height: 30px;
+         background: url("../img/collections/icon.svg") 0 0 no-repeat;
+      }
+   }
+   // .image-collections
+   .image-collections {
+      flex: 0 1 554px;
+      display: flex;
+      padding-right: 18px;
+      @media (max-width: 630px) {
+         flex-basis: auto; /* 536/1320 */
+         justify-content: center;
+         padding-right: 0;
+      }
+      // .image-collections__content
+      &__content {
+         flex: 0 1 424px;
+         position: relative;
+         padding-bottom: 20px;
+         //  .image-collection__content::after
+         &::after {
+            content: "";
+            width: 100%;
+            height: calc(100% - 20px);
+            border-radius: 37.735849% 0 / 29.520295% 0;
+            border: 2px solid #b6b7b7;
+            position: absolute;
+            top: 3.690037%; /* 20/542 */
+            left: 4.245283%;
+            @media (max-width: 630px) {
+               flex-basis: auto;
+            }
+         }
+         img {
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 424 / 542;
+            border-radius: 37.735849% 0 / 29.520295% 0;
+            position: relative;
+            z-index: 2;
+         }
+      }
+   }
+
+   .button {
+      font-family: "Roboto", sans-serif;
+      font-size: 29px;
+      padding: 19px 26px;
+      transition: all 0.5s;
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: #ff6f61;
+         }
+      }
+      @media (max-width: $breakpoint-lg) {
+         font-size: 20px;
+         padding: 10px 26px;
+      }
+      @media (max-width: $breakpoint-sm) {
+         width: 100%;
+      }
+   }
+}

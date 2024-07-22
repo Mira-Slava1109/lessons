@@ -1,0 +1,138 @@
+.page {
+   // .page__explore
+
+   &__explore {
+   }
+}
+.explore {
+   color: #fff;
+   font-weight: 600;
+   font-family: $fontDetail;
+   @include adaptiveValue("padding-bottom", 140, 40);
+
+   // .explore__container
+
+   &__container {
+      position: relative;
+   }
+
+   // .explore__title
+
+   &__title {
+      @media (min-width: 1424px) {
+         writing-mode: vertical-rl;
+         transform: rotate(180deg) translateX(100%);
+         position: absolute;
+         top: 3.395062%; /* 22/648 */
+      }
+      color: #000;
+      font-size: 34px;
+      line-height: 1.53;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      &:not(:last-child) {
+         margin-bottom: 35px;
+      }
+      @media (max-width: $breakpoint-md) {
+         font-size: 24px;
+         &:not(:last-child) {
+            margin-bottom: 20px;
+         }
+      }
+   }
+
+   // .explore__content
+
+   &__content {
+      display: grid;
+      gap: 24px;
+      grid-template: repeat(2, 1fr) / repeat(auto-fill, minmax(250px, 1fr));
+      // grid-template: repeat(2, 1fr) /  repeat(4, 1fr);
+   }
+
+   // .explore__item
+
+   &__item {
+   }
+}
+.item-explore {
+   @media (min-width: 553px) {
+      &:nth-child(10n + 1),
+      &:nth-child(10n + 8) {
+         grid-column: span 2;
+         grid-row: span 2;
+      }
+   }
+
+   // .item-explore__card
+
+   &__card {
+   }
+}
+.card-item-explore {
+   position: relative;
+   display: grid;
+   width: 100%;
+   overflow: hidden;
+   // transition: all 0.3s;
+   @media (any-hover: hover) {
+      &:hover &__image {
+         transform: scale(1.05);
+      }
+   }
+   &__image {
+      width: 100%;
+      // height: 100%;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      transition: all 0.5s;
+   }
+   @media (any-hover: hover) {
+      &:hover &__label,
+      &:focus-visible &__label {
+         opacity: 1;
+      }
+   }
+   // .card-item-explore__list
+
+   &__list {
+   }
+
+   // .card-item-explore__status
+
+   &__status {
+   }
+   // .card-item-explore__label
+
+   &__label {
+   }
+}
+
+.label {
+   padding: 10px 15px;
+   min-height: 52px;
+   background-color: #1e2832;
+   display: flex;
+   gap: 15px;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   opacity: 0;
+   transition: all 0.5s;
+   @media (max-width: $breakpoint-md) {
+      min-height: 42px;
+   }
+   @media (any-hover: none) {
+      opacity: 1;
+   }
+   // .label__quantity
+
+   &__quantity {
+      display: flex;
+      gap: 5px;
+   }
+}

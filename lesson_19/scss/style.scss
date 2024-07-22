@@ -1,0 +1,126 @@
+@use "sass:math";
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,600&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500&display=swap");
+
+@import "_fonts.scss";
+
+@import "_reset.scss";
+
+@import "_mixins.scss";
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1320;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$backgroundColor: #ffffff;
+$textColor: #000;
+$fontMain: "Roboto", sans-serif;
+$fontDetail: "Open Sans", sans-serif;
+
+$breakpoint-lg: 991.98px;
+$breakpoint-md: 767.98px;
+$breakpoint-sm: 450px;
+
+body {
+   font-family: $fontMain;
+   color: $textColor;
+   background-color: $backgroundColor;
+   text-transform: capitalize;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+   display: flex;
+   flex-direction: column;
+}
+.wrapper > main {
+   flex-grow: 1;
+}
+[class*="__container"] {
+   max-width: toPx($containerWidth);
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+@import "_header.scss";
+
+@import "_collection.scss";
+
+@import "_brand.scss";
+
+@import "_explore.scss";
+
+@import "_products.scss";
+
+@import "_zara.scss";
+
+@import "_follow.scss";
+
+@import "_footer.scss";
+/*=======================  section Collections ======================================*/
+.logo{
+   img {
+      width: 100%;
+      object-fit: contain;
+      aspect-ratio: 180 / 34;
+   }
+}
+
+.title {
+   @include adaptiveValue("font-size", 50, 30);
+   font-family: "Roboto", sans-serif;
+   font-weight: 500;
+   text-align: center;
+}
+@media (any-hover: hover) {
+   .link:hover,
+   .actions__button:hover,
+   .footer-card__title:hover,
+   .bottom-footer__scroll-up:hover {
+      color: #ff6f61;
+   }
+}
+.mark {
+   position: absolute;
+   top: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   z-index: 3;
+}
+.status {
+   padding: 4px 12px;
+   color: #fff;
+}
+.status--hot {
+   background-color: #ff6f61;
+}
+.status--sale {
+   background-color: #1e2832;
+}
+.price {
+   display: flex;
+   gap: 12px;
+   font-size: 14px;
+   text-transform: capitalize;
+   &:has(.price__old) .price__new {
+      color: #ff6f61;
+   }
+
+   // .price__old
+
+   &__old {
+      color: rgba(0, 0, 0, 0.5);
+      text-decoration: line-through;
+   }
+}
