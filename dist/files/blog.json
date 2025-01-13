@@ -2,7 +2,7 @@
   "items":[
     {
       "id":1,
-      "image":"img/blog/01.jpg",
+      "image":"img/blog/01.webp",
       "title":"Understanding Smart Home Systems & Maintenance",
       "url":"https://google.com",
       "date":"19 Jan 2023",
@@ -16,7 +16,7 @@
     },
     {
       "id":2,
-      "image":"img/blog/02.jpg",
+      "image":"img/blog/02.webp",
       "title":"The Ultimate Guide to Home Repairs and Renovations",
       "url":"https://google.com",
       "date":"19 Jan 2023",
@@ -30,7 +30,7 @@
     },
     {
       "id":3,
-      "image":"img/blog/03.jpg",
+      "image":"img/blog/03.webp",
       "title":"Painting Techniques for a Kitchen Refresh",
       "url":"https://google.com",
       "date":"19 Jan 2023",
@@ -43,7 +43,7 @@
     },
     {
       "id":4,
-      "image":"img/blog/01.jpg",
+      "image":"img/blog/01.webp",
       "title":"Understanding Smart Home Systems & Maintenance",
       "url":"https://google.com",
       "date":"19 Jan 2023",
