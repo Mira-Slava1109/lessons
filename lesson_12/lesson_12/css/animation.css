@@ -1,0 +1,276 @@
+@keyframes car{
+   0%{
+      top: 0;
+      left: 100%;
+   }
+   50%{
+      top: -300px;
+      left: 100%;
+      transform: scale(0.8);
+   }
+   100%{
+      top: 0;
+      left: 50%;
+      transform: scale(1);
+   }
+}
+/* ============================= */
+@keyframes road{
+   0% {
+      right: 0%;
+   }
+   100% {
+      right: -100%;
+   }
+}
+@keyframes back{
+   0% {
+      right: 0%;
+   }
+   100% {
+      right: -100%;
+   }
+}
+
+@keyframes sing {
+   0%{
+      left: -50%;
+   }
+   100%{
+      left:100%
+   }
+}
+/* ================================================ */
+@keyframes wheel{
+   0% {
+      transform: translateY(0) rotate(0);
+   }
+   50% {
+      transform: translateY(-30px) rotate(0);
+   }
+   100% {
+   transform: translateY(-30px) rotate3d(1, 0, 0, -180deg);
+}
+}
+
+@keyframes wheel-rotate{
+   0%{   
+      transform: rotate(0deg);
+      }
+   100%{
+      transform: rotate(-360deg);
+   }
+}
+/* ========================================== */
+@keyframes door{
+	0% {
+		width:200px;
+	}
+	100% {
+      width: 0px;
+		transform: translateX(200px);
+	}
+}
+
+@keyframes lighthouse{
+	0% {
+		width:90px;
+	}
+	100% {
+      width: 0px;
+		transform: translateX(20px);
+	}
+}
+/* ========================================== */
+@keyframes windows{
+	0% {
+		width:200px;
+      height: 180px;
+      transform: translate(0px, 0px);
+      margin-right: 0px;
+	}
+	100% {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      transform: translate(50px, 10px);
+      margin-right: 20px;
+	}
+}
+/* ============================================ */
+@keyframes first-window{
+	0%,
+   100%{
+      transform: translateY(0px);
+	}
+	50% {
+      transform: translateY(70px);
+	}
+}
+@keyframes Illuminator{
+	0% {
+		width:160px;
+      height: 140px;
+      transform: translate(0px, 0px);
+	}
+	100% {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+	}
+}
+@keyframes second-window{
+	0% {
+		width:160px;
+      height: 140px;
+      transform: translate(0px, 0px);
+	}
+	100% {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+	}
+}
+/* =========================================== */
+
+@keyframes mirror{
+   0% {
+      transform:  rotate(0);
+   }
+   50% {
+      transform:  rotate(0);
+   }
+   100% {
+   transform:  rotate3d(1, 0, 0, -180deg);
+}
+}
+
+/* ==================================== */
+@keyframes periscope{
+   0%{   
+      transform: translate(0px, 0px);
+      }
+   100%{
+      transform: translate(0px, -95px);
+   }
+}
+@keyframes propeller{
+   0%{   
+      transform: translate(0px, 0px);
+      }
+   100%{
+      transform: translate(140px, 15px);
+   }
+}
+/* ====================== */
+@keyframes text{
+from {
+   transform: scale(0) translateY(0px);
+   visibility: hidden;
+}
+
+to {
+   visibility: visible;
+   transform: scale(2) translateY(-200px);
+}
+}
+/* ================================== */
+@keyframes darken {
+   0%{
+      opacity: 0;
+   }
+   50%{
+      opacity: 1;
+   }
+   100%{
+      opacity: 0;
+   }
+}
+@keyframes sea {
+   from{
+      opacity: 0;
+   }
+   to{
+      opacity: 1;
+   }
+}
+/* ============================= */
+
+@keyframes bob {
+   0%{
+      left: -20%;
+   }
+   100%{
+      left: 20%;
+   }
+}
+@keyframes bob-tolk-1 {
+   0%,
+   100%{
+      opacity: 0;
+   }
+   50%{
+      opacity: 1;
+   }
+}
+@keyframes bob-tolk-2 {
+   0%,
+   100%{
+      opacity: 0;
+   }
+   50%{
+      opacity: 1;
+   }
+}
+@keyframes bob-tolk-3 {
+   0%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+/* ======================== */
+@keyframes patric {
+   0%{
+      left: -20%;
+   }
+   100%{
+      left: 10%;
+   }
+}
+@keyframes patric-tolk-1 {
+   0%,
+   100%{
+      opacity: 0;
+   }
+   50%{
+      opacity: 1;
+   }
+}
+@keyframes patric-tolk-2 {
+   0%,
+   100%{
+      opacity: 0;
+   }
+   50%{
+      opacity: 1;
+   }
+}
+@keyframes patric-tolk-3 {
+   0%,
+   100%{
+      opacity: 0;
+   }
+   50%{
+      opacity: 1;
+   }
+}
+@keyframes patric-tolk-4 {
+   0%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
